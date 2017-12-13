@@ -1,4 +1,4 @@
-@# Accessibility
+@# Accessibility|无障碍访问
 
 Blueprint致力于提供开箱即用的无障碍组件。 许多JS组件将应用无障碍的HTML属性来支持不同的使用模式。
 

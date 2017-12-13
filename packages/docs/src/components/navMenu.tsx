@@ -40,7 +40,7 @@ export const NavMenuItem: React.SFC<INavMenuItemProps & { children?: React.React
     return (
         <li className={classes} key={item.route}>
             <a className={itemClasses} href={"#" + item.route} onClick={handleClick}>
-                {item.title}
+                {item.title.split('|')[1] ? item.title.split('|')[1] : item.title}
             </a>
             {props.children}
         </li>

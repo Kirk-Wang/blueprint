@@ -26,3 +26,4 @@ docs/*.d.ts
 docs/**/*.d.ts
 docs/assets/inline
 tmp.md
+docs.zip
