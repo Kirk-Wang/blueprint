@@ -154,6 +154,7 @@ header {
 
     &:nth-child(1) {
       float: left;
+      white-space: nowrap;
     }
 
     &:nth-child(2) {
@@ -176,7 +177,7 @@ header {
     img {
       float: left;
       margin-right: $pt-grid-size * 3;
-      margin-bottom: $pt-grid-size * 5;
+      // margin-bottom: $pt-grid-size * 5;
       width: $pt-grid-size * 7;
       height: $pt-grid-size * 7;
     }

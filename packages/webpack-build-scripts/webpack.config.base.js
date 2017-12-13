@@ -106,6 +106,7 @@ module.exports = {
             errors: true,
         },
         port: 9000,
+        host: '0.0.0.0',
     },
 
     module: {
