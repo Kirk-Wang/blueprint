@@ -1,7 +1,6 @@
 @## Color aliases
 
-These variables are semantic aliases of our [colors](#colors).
-They are used throughout Blueprint itself to ensure consistent color usage across components.
+这些变量是我们[颜色](#colors)的语义别名。 它们在整个Blueprint中使用，以确保各个组件之间的颜色使用一致。
 
 <table class="pt-table docs-color-aliases-table">
     <thead>

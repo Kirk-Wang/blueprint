@@ -1,21 +1,14 @@
 @# Accessibility
 
-Blueprint strives to provide accessible components out of the box. Many of the JS components
-will apply accessible HTML attributes to support different modes of usage.
+Blueprint致力于提供开箱即用的无障碍组件。 许多JS组件将应用无障碍的HTML属性来支持不同的使用模式。
 
 @## Focus management
 
-Focus states (that glowy blue outline around the active element) are essential for keyboard
-navigation to indicate which element is currently active. They are less important, and
-occasionally outright intrusive, when using a mouse because you can click wherever you want at
-any time.
+焦点状态（活动元素周围的亮蓝色轮廓）对键盘导航至关重要，以指示哪个元素当前处于活动状态。 在使用鼠标时，它们不那么重要，有时甚至是彻头彻尾的侵入，因为您可以随时点击任意位置。
 
-Blueprint includes a utility that manages the appearance of focus styles. When enabled, focus styles
-will be hidden while the user interacts using the mouse and will appear when the
-<kbd class="pt-key">tab</kbd> key is pressed to begin keyboard navigation. Try this out for yourself
-below.
+Blueprint包含一个管理焦点样式外观的实用程序。 启用时，用户使用鼠标进行交互时，焦点样式将被隐藏，并在按<kbd class="pt-key">tab</kbd>键以开始键盘导航时出现。在下面尝试一下。
 
-**You must explictly enable this feature in your app (and you probably want to):**
+**您必须在您的应用程序中明确启用此功能（并且您可能想要）：**
 
 ```ts
 import { FocusStyleManager } from "@blueprintjs/core";
@@ -23,22 +16,18 @@ import { FocusStyleManager } from "@blueprintjs/core";
 FocusStyleManager.onlyShowFocusOnTabs();
 ```
 
-Note that the focus style for text inputs (a slightly thicker colored border) is not removed by this
-utility because it is always useful to know where you're typing.
+请注意，文本输入的焦点样式（稍厚的彩色边框）不会被此实用程序删除，因为知道您输入的位置总是有用的。
 
 @reactExample FocusExample
 
 @### JavaScript API
 
-This behavior is controlled by a singleton instance called `FocusStyleManager` that lives in the
-__@blueprintjs/core__ package. It supports the following public methods:
+这种行为由位于__@blueprintjs/core__包中的名为`FocusStyleManager`的单例控制。 它支持以下公共方法：
 
-- `FocusStyleManager.isActive(): boolean`: Returns whether the `FocusStyleManager` is currently running.
-- `FocusStyleManager.onlyShowFocusOnTabs(): void`: Enable behavior which hides focus styles during mouse interaction.
-- `FocusStyleManager.alwaysShowFocus(): void`: Stop this behavior (focus styles are always visible).
+- `FocusStyleManager.isActive(): boolean`：返回`FocusStyleManager`当前是否正在运行。
+- `FocusStyleManager.onlyShowFocusOnTabs(): void`：在鼠标交互过程中启用隐藏焦点样式的行为。
+- `FocusStyleManager.alwaysShowFocus(): void`：停止这种行为（焦点样式始终可见）。
 
 @## Color contrast
 
-Colors have been designed to be accessible to as many people as possible, even those who are
-visually impaired or experiencing any kind of colorblindness. Our colors have not only been chosen
-to go well together but to also adhere to [WCAG 2.0](https://www.w3.org/TR/WCAG20/) standards.
+颜色被设计为尽可能多的人可以访问，即使是那些视力受损或遭受任何色盲的人也是如此。 我们的颜色不仅被选择在一起，而且还遵守[WCAG 2.0](https://www.w3.org/TR/WCAG20/) 标准。

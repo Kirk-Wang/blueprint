@@ -1,76 +1,69 @@
 @# Blueprint
 
-Blueprint is a React-based UI toolkit for the web.
+Blueprint是一个针对web的，基于React的UI toolkit。
 
-Development and issue tracking occurs in [github.com/palantir/blueprint](https://github.com/palantir/blueprint).
+开发和问题跟踪产生在[github.com/palantir/blueprint](https://github.com/palantir/blueprint)。
 
-Releases are tagged and documented [here on GitHub](https://github.com/palantir/blueprint/releases).
+发行版被标记并记录[在GitHub上](https://github.com/palantir/blueprint/releases)。
 
-Use the [__blueprintjs__ tag on Stack Overflow](http://stackoverflow.com/questions/tagged/blueprintjs)
-for support requests.
+对于支持请求，在Stack Overflow上使用[__blueprintjs__标记](http://stackoverflow.com/questions/tagged/blueprintjs)。
 
 @## Browser support
 
-**Blueprint supports Chrome, Firefox, Safari, IE 11, and Microsoft Edge.**
+**Blueprint支持Chrome、Firefox、Safari、IE 11和Microsoft Edge。**
 
-You may experience degraded visuals in IE.
-IE 10 and below are unsupported due to their lack of support for CSS Flexbox Layout.
-These browsers were deprecated by Microsoft (end of support) in [January 2016](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support).
+在IE中，您可能会遇到降级的视觉效果。 
+IE 10及以下版本由于缺乏对CSS Flexbox Layout的支持而不被支持。 
+这些浏览器在[2016年1月](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support)被微软（支持结束）弃用。
 
 @## Usage
 
-Blueprint is available as a collection of NPM packages under the `@blueprintjs` scope. The full
-package list and their latest versions appear under the _Releases_ dropdown above.
+Blueprint作为NPM包的集合在`@blueprintjs`作用域下。完整的包列表和它们的最新版本出现在上面的_发行版_下拉列表下。
 
-Each package contains a CSS file and a collection of CommonJS modules exposing React components.
-The `main` module exports all symbols from all modules so you don't have to import individual files
-(though you can if you want to). The JavaScript components are stable and their APIs adhere to
-[semantic versioning](http://semver.org/).
+每个包都包含一个CSS文件和一组暴露React组件的CommonJS模块。`main`模块从所有模块中导出所有symbols，所以你不必导入单个文件（尽管你可以如果你想）。JavaScript组件是稳定的，它们的API遵循[semantic versioning](http://semver.org/)。
 
 @### NPM installation
 
-1. Install the core package with an NPM client like `npm` or `yarn`, pulling in all relevant
-dependencies:
+1. 使用NPM客户端（如`npm`或`yarn`）安装核心软件包，引入所有相关的依赖关系：
 
   ```sh
   npm install --save @blueprintjs/core
   ```
 
-1. If you see `UNMET PEER DEPENDENCY` errors, you should manually install React:
+1. 如果你看到`UNMET PEER DEPENDENCY`错误，你应该手动安装React：
 
   ```sh
   npm install --save react react-dom react-addons-css-transition-group
   ```
 
-1. After installation, you'll be able to import the React components in your application:
+1. 安装之后，您将能够在应用程序中导入React组件：
 
   ```tsx
-  // extract specific components
+  // 提取特定的组件
   import { Intent, Spinner, DatePickerFactory } from "@blueprintjs/core";
-  // or just take everything!
+  // 或者提取一切！
   import * as Blueprint from "@blueprintjs/core";
 
-  // using JSX:
+  // 使用JSX：
   const mySpinner = <Spinner intent={Intent.PRIMARY} />;
 
-  // using the namespace import:
+  // 使用命名空间导入：
   const anotherSpinner = <Blueprint.Spinner intent={Blueprint.Intent.PRIMARY}/>;
 
-  // use factories for React.createElement shorthand if you're not using JSX.
-  // every component provides a corresponding <Name>Factory.
+  // 如果您不使用JSX，请使用React.createElement简写工厂。
+  // 每个组件都提供相应的<Name>Factory.
   const myDatePicker = DatePickerFactory();
   ```
 
-1. Don't forget to include the main CSS file from each Blueprint package! Additionally, the
-`resources/` directory contains supporting media such as fonts and images.
+1. 不要忘记包含来自每个Blueprint包的主要CSS文件！另外，`resources/`目录包含支持的媒体，如字体和图片。
 
   ```html
-  <!-- in plain old reliable HTML -->
+  <!-- 在普通的旧的可靠的HTML -->
   <!DOCTYPE HTML>
   <html>
     <head>
       ...
-      <!-- include dependencies manually -->
+      <!-- 手动包含依赖项 -->
       <link href="path/to/node_modules/normalize.css/normalize.css" rel="stylesheet" />
       <link href="path/to/node_modules/@blueprintjs/core/dist/blueprint.css" rel="stylesheet" />
       ...
@@ -80,19 +73,16 @@ dependencies:
   ```
 
   ```css.scss
-  // or, using node-style package resolution in a CSS file:
-  // (dependencies' stylesheets should be resolved automatically)
+  // 或者在CSS文件中使用 node-style 的包解析：
+  //（依赖关系的样式表应该会被自动解析）
   @import "~@blueprintjs/core";
   ```
 
 @### CDN consumption
 
-Blueprint supports the venerable [unpkg CDN](https://unpkg.com). Each package provides a UMD
-`dist/[name].bundle.js` file containing the bundled source code. The UMD wrapper exposes each
-library on the `Blueprint` global variable: `Blueprint.Core`, `Blueprint.Datetime`, etc.
+Blueprint支持过去的[unpkg CDN](https://unpkg.com)。每个软件包提供一个UMD`dist/[name].bundle.js`文件，其中包含捆绑的源代码。UMD包装器在`Blueprint`全局变量上暴露了每个库：`Blueprint.Core`，`Blueprint.Datetime`等。
 
-These bundles _do not include_ external dependencies; your application will need to ensure that
-`normalize.css`, `React`, `classnames`, and `Tether` are available at runtime.
+这些包_不包括_外部依赖; 你的应用程序将需要确保`normalize.css`，`React`，`classnames`和`Tether`在运行时可用。
 
 ```html
 <!DOCTYPE html>
@@ -126,18 +116,13 @@ These bundles _do not include_ external dependencies; your application will need
 
 @### DOM4
 
-Blueprint relies on a handful of DOM Level 4 API methods: `el.query`, `el.queryAll`, and
-`el.closest()`. `@blueprintjs/core` depends on a [polyfill library called `dom4`][dom4] to ensure
-these methods are available. This module is conditionally loaded if Blueprint is used in a browser
-environment.
+Blueprint依赖少数DOM Level 4 API方法：`el.query`，`el.queryAll`和`el.closest()`。 `@blueprintjs/core`依赖于[名为`dom4`的polyfill库][dom4]，以确保这些方法可用。如果在浏览器环境中使用Blueprint，则该模块将被有条件加载。
 
 [dom4]: https://webreflection.github.io/dom4/
 
 @### TypeScript
 
-Blueprint is written in TypeScript and therefore its own `.d.ts` type definitions are distributed in
-the NPM package and should be resolved automatically by the compiler. However, you'll need to
-install typings for Blueprint's dependencies before you can consume it:
+Blueprint是用TypeScript编写的，因此它自己的`.d.ts`类型定义分布在NPM包中，并且应由编译器自动解析。但是，在你使用它之前，您需要为Blueprint的依赖项安装typings：
 
 ```sh
 # required for all @blueprintjs packages:
@@ -151,28 +136,25 @@ npm install --save @types/es6-shim
 ```
 
 <div class="pt-callout pt-intent-primary pt-icon-info-sign">
-  For more information, see the TypeScript Handbook for
-  [guidance on consuming declaration files][handbook].
+  有关更多信息，请参阅TypeScript手册关于[使用定义文件指南][handbook]。
 </div>
 
 [handbook]: https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html
 
 @### Vanilla JS APIs
 
-JS components are built using React, but that does not limit their usage to just React applications.
-You can render any component in any JavaScript application with `ReactDOM.render`. Think of it like
-using a jQuery plugin.
+JS组件是使用React构建的，但并不仅限于React应用程序。您可以在任何JavaScript应用程序中使用`ReactDOM.render`渲染任何组件。把它想像成使用jQuery插件。
 
 ```tsx
 const myContainerElement = document.querySelector(".my-container");
 
-// with JSX
+// 与 JSX
 ReactDOM.render(
     <Spinner className="pt-intent-primary pt-small" />,
     myContainerElement
 );
 
-// with vanilla JS, use the factory
+// 与 vanilla JS, 使用 factory
 ReactDOM.render(
     SpinnerFactory({
         className: "pt-intent-primary pt-small"
@@ -181,48 +163,43 @@ ReactDOM.render(
 );
 ```
 
-To remove the component from the DOM and clean up, unmount it:
+要从DOM中删除组件并清理，请将其卸载：
 
 ```tsx
 ReactDOM.unmountComponentAtNode(myContainerElement);
 ```
 
-Check out the [React API docs](https://facebook.github.io/react/docs/react-api.html) for more details.
+查看[React API文档](https://facebook.github.io/react/docs/react-api.html)了解更多详情。
 
 
-You'll need to install React `v15.x` or `v0.14.x` alongside Blueprint.
+你需要在Blueprint上安装React`v15.x`或`v0.14.x`。
 
 ```sh
 npm install --save @blueprintjs/core react react-dom react-addons-css-transition-group
 ```
 
-Import components from the `@blueprintjs/core` module into your project.
-Don't forget to include the main CSS stylesheet too!
+将组件从`@blueprintjs/core`模块导入到您的项目中。不要忘记也包括主CSS样式表！
 
-**Review the [general usage docs](#blueprint.usage) for more complete installation instructions.**
+**查看[一般使用文档](#blueprint.usage)以获取更完整的安装说明。**
 
 @## Understanding TypeScript
 
-Blueprint is written in [TypeScript](https://www.typescriptlang.org/), a statically typed superset
-of JavaScript that compiles to plain JavaScript. All the code samples throughout this site and
-all interactive examples are also written in TypeScript. TypeScript code looks exactly like ES2015+
-code with the addition of type signatures, which typically appear after colons and are colored
-gold in our syntax theme.
+Blueprint是用[TypeScript](https://www.typescriptlang.org/)编写的，它是一个JavaScript静态类型的超集，可以编译成普通的JavaScript。本站点中的所有代码示例以及所有交互式示例也都是用TypeScript编写的。TypeScript代码看起来与ES2015+代码完全一样，但是添加了类型签名，通常在冒号后面出现，并在语法主题中显示为金色。
 
 ```ts
-// variables
+// 变量
 const variableName: varType;
 const name: string;
 const disabled: boolean;
 
-// functions (and function variables)
+// 函数（和函数变量）
 function funcName(arg1: argType, arg2: argType): returnType { }
 const funcName: (arg1: argType) => returnType;
 function split(str: string, delim: string): string[] { }
 function map<T, U>(array: T[], iterator: (item: T, index: number) => U): U[];
 
-// interfaces describe plain objects
-// (we use the convention that interfaces begin with "I")
+// 接口描述普通对象
+//（我们使用以“I”开头的接口约定）
 interface IOption {
   label: string;
   value: string;
@@ -230,13 +207,8 @@ interface IOption {
 const option: IOption = { label: "Name", value: "gilad" };
 ```
 
-**You do not need to use TypeScript to consume Blueprint** (but major "props" if you do). Familiarity
-with the syntax is suggested so you can follow our examples
-([the handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html) has good documentation
-for getting started). Simply ignoring the type annotations in your head will produce valid ES2015 code.
+**您并不需要使用TypeScript来消费Blueprint** (but major "props" if you do). 建议熟悉语法，以便您可以按照我们的示例进行操作（[该手册](https://www.typescriptlang.org/docs/handbook/basic-types.html)有很好的入门文档）。
 
 @## Development & contributions
 
-Most dev-related information is on [our GitHub wiki](https://github.com/palantir/blueprint/wiki),
-including our [coding guidelines](https://github.com/palantir/blueprint/wiki/Coding-guidelines)
-and our [development practices](https://github.com/palantir/blueprint/wiki/Development-Practices).
+大多数与开发相关的信息都在[我们的GitHub wiki](https://github.com/palantir/blueprint/wiki)上，包括我们的[编码指南](https://github.com/palantir/blueprint/wiki/Coding-guidelines)和我们的[开发实践](https://github.com/palantir/blueprint/wiki/Development-Practices)。
