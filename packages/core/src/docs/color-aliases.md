@@ -1,4 +1,4 @@
-@## Color aliases
+@## Color aliases|颜色别名
 
 这些变量是我们[颜色](#colors)的语义别名。 它们在整个Blueprint中使用，以确保各个组件之间的颜色使用一致。
 

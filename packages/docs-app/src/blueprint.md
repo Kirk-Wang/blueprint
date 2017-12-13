@@ -8,7 +8,7 @@ Blueprint是一个针对web的，基于React的UI toolkit。
 
 对于支持请求，在Stack Overflow上使用[__blueprintjs__标记](http://stackoverflow.com/questions/tagged/blueprintjs)。
 
-@## Browser support
+@## Browser support|浏览器支持
 
 **Blueprint支持Chrome、Firefox、Safari、IE 11和Microsoft Edge。**
 
@@ -16,13 +16,13 @@ Blueprint是一个针对web的，基于React的UI toolkit。
 IE 10及以下版本由于缺乏对CSS Flexbox Layout的支持而不被支持。 
 这些浏览器在[2016年1月](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support)被微软（支持结束）弃用。
 
-@## Usage
+@## Usage|用法
 
 Blueprint作为NPM包的集合在`@blueprintjs`作用域下。完整的包列表和它们的最新版本出现在上面的_发行版_下拉列表下。
 
 每个包都包含一个CSS文件和一组暴露React组件的CommonJS模块。`main`模块从所有模块中导出所有symbols，所以你不必导入单个文件（尽管你可以如果你想）。JavaScript组件是稳定的，它们的API遵循[semantic versioning](http://semver.org/)。
 
-@### NPM installation
+@### NPM installation|NPM 安装
 
 1. 使用NPM客户端（如`npm`或`yarn`）安装核心软件包，引入所有相关的依赖关系：
 
@@ -78,7 +78,7 @@ Blueprint作为NPM包的集合在`@blueprintjs`作用域下。完整的包列表
   @import "~@blueprintjs/core";
   ```
 
-@### CDN consumption
+@### CDN consumption|CDN 使用
 
 Blueprint支持过去的[unpkg CDN](https://unpkg.com)。每个软件包提供一个UMD`dist/[name].bundle.js`文件，其中包含捆绑的源代码。UMD包装器在`Blueprint`全局变量上暴露了每个库：`Blueprint.Core`，`Blueprint.Datetime`等。
 
@@ -182,7 +182,7 @@ npm install --save @blueprintjs/core react react-dom react-addons-css-transition
 
 **查看[一般使用文档](#blueprint.usage)以获取更完整的安装说明。**
 
-@## Understanding TypeScript
+@## Understanding TypeScript|理解TypeScript
 
 Blueprint是用[TypeScript](https://www.typescriptlang.org/)编写的，它是一个JavaScript静态类型的超集，可以编译成普通的JavaScript。本站点中的所有代码示例以及所有交互式示例也都是用TypeScript编写的。TypeScript代码看起来与ES2015+代码完全一样，但是添加了类型签名，通常在冒号后面出现，并在语法主题中显示为金色。
 
@@ -209,6 +209,6 @@ const option: IOption = { label: "Name", value: "gilad" };
 
 **您并不需要使用TypeScript来消费Blueprint** (but major "props" if you do). 建议熟悉语法，以便您可以按照我们的示例进行操作（[该手册](https://www.typescriptlang.org/docs/handbook/basic-types.html)有很好的入门文档）。
 
-@## Development & contributions
+@## Development & contributions|开发 & 贡献
 
 大多数与开发相关的信息都在[我们的GitHub wiki](https://github.com/palantir/blueprint/wiki)上，包括我们的[编码指南](https://github.com/palantir/blueprint/wiki/Coding-guidelines)和我们的[开发实践](https://github.com/palantir/blueprint/wiki/Development-Practices)。

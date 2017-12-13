@@ -163,11 +163,13 @@ header {
   }
 
   .pt-feature {
+    width: $pt-grid-size * 37;
+    height: $pt-grid-size * 12;
     color: $pt-text-color-muted;
 
-    &:not(:first-child) {
-      padding-top: $pt-grid-size * 6;
-    }
+    // &:not(:first-child) {
+    //   padding-top: $pt-grid-size * 6;
+    // }
 
     h4 {
       margin-top: $pt-grid-size / 2;
