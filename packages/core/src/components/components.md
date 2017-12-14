@@ -1,4 +1,4 @@
-@# Components
+@# Components|组件
 
 <!-- Exact ordering of components in the navbar: -->
 

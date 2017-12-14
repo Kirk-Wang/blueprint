@@ -15,42 +15,42 @@ import { Icon, IconName } from "../icon/icon";
 
 export interface IAlertProps extends IProps {
     /**
-     * The text for the cancel button.
+     * 取消按钮的文本。
      */
     cancelButtonText?: string;
 
     /**
-     * The text for the confirm (right-most) button.
+     * 确认（最右边）按钮的文本。
      * @default "OK"
      */
     confirmButtonText?: string;
 
-    /** Name of the icon (the part after `pt-icon-`) to add next to the alert message */
+    /** 警告消息旁边要添加的图标的名称（`pt-icon-`之后的部分） */
     iconName?: IconName;
 
     /**
-     * The intent to be applied to the confirm (right-most) button.
+     * 意图被应用到确认（最右）按钮。
      */
     intent?: Intent;
 
     /**
-     * Toggles the visibility of the alert.
-     * This prop is required because the component is controlled.
+     * 显示隐藏警告提示
+     * 这个属性是必需的，因为组件是受控的。
      */
     isOpen: boolean;
 
     /**
-     * CSS styles to apply to the alert.
+     * 应用于警告的CSS样式。
      */
     style?: React.CSSProperties;
 
     /**
-     * Handler invoked when the cancel button is clicked.
+     * 在单击取消按钮时被调用的处理程序。
      */
     onCancel?(e: React.MouseEvent<HTMLButtonElement>): void;
 
     /**
-     * Handler invoked when the confirm button is clicked.
+     * 在单击确认按钮时被调用的处理程序。
      */
     onConfirm(e: React.MouseEvent<HTMLButtonElement>): void;
 }

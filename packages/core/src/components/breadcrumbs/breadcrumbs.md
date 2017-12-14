@@ -1,4 +1,4 @@
-@# Breadcrumbs
+@# Breadcrumbs 面包屑
 
 Breadcrumbs identify the current resource in an application.
 
