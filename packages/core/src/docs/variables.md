@@ -1,19 +1,17 @@
-@# Variables
+@# Variables|变量
 
-Available for use with Sass and Less.
+可用于Sass和Less。
 
 ```css.scss
 @import "path/to/@blueprintjs/core/dist/variables";
 ```
 
-The Sass `$` convention is used in this documentation for consistency with the original source code.
-Every variable mentioned below is also available in `variables.less` with an `@` prefix instead of `$`.
+本文档中使用了Sass`$`约定来与原始源代码保持一致。
+下面提到的每个变量也可以在`variables.less`中用`@`前缀而不是`$`来提供。
 
-@## Font variables
+@## Font variables|字体变量
 
-Typically, correct typography styles should be achieved by using the proper HTML tag (`<p>` for
-text, `<h*>` for headings, `<code>` for code, etc.). The following variables are provided for the
-rare cases where custom styling is necessary and should be used sparingly:
+通常情况下，正确的排版风格应该通过使用正确的HTML标签（文本为`<p>`，标题为`<h*>`，代码`<code>`等）来实现。 以下变量提供了对于自定义样式是必要的罕见情况，应该谨慎使用：
 
 - `$pt-font-family`
 - `$pt-font-family-monospace`
@@ -22,31 +20,27 @@ rare cases where custom styling is necessary and should be used sparingly:
 - `$pt-font-size-large`
 - `$pt-line-height`
 
-See the [Fonts section](#core/typography.fonts) for more information and usage guidelines.
+有关更多信息和使用指南，请参阅[字体部分](#core/typography.fonts)。
 
-@## Icon variables
+@## Icon variables|图标变量
 
-Most icons should be displayed using the `span.pt-icon-*` classes or via modifier classes on
-components like `.pt-button`. In rare cases, you may need direct access to the content
-string that generates each icon in the icon font. Blueprint provides these variables with
-straightforward names (see the [Icons section](#core/icons) for the full list of identifiers):
+大多数图标应该使用`span.pt-icon-*`类或通过像`.pt-button`这样的修饰符类在组件上显示。在极少数情况下，您可能需要直接访问以图标字体生成每个图标的内容字符串。Blueprint为这些变量提供了直接的名称（请参阅[图标部分](#core/icons)以获取标识符的完整列表）：
 
 - `$pt-icon-style`
 - `$pt-icon-align-left`
 - `$pt-icon-align-center`
 - ...
 
-Variables are also provided for the two icon font families and their pixel sizes:
+还为两种图标字体系列及其像素大小提供了变量：
 
 - `$icons16-family`
 - `$icons20-family`
 - `$pt-icon-size-standard`
 - `$pt-icon-size-large`
 
-@## Grids & dimensions
+@## Grids & dimensions|网格 & 尺寸
 
-Sizes of common components. Most sizing variables are based on `$pt-grid-size`, which has
-a value of `10px`. Custom components should adhere to the relevant `height` variable.
+通用组件的尺寸。大多数大小的变量都是基于`$pt-grid-size`，它的值是`10px`。自定义组件应该遵守相关`height`变量。
 
 - `$pt-grid-size`
 - `$pt-border-radius`
@@ -56,23 +50,17 @@ a value of `10px`. Custom components should adhere to the relevant `height` vari
 - `$pt-input-height-large`
 - `$pt-navbar-height`
 
-@### Grid system
+@### Grid system|网格系统
 
-Blueprint doesn't provide a grid system. In general, you should try to use the `$pt-grid-size`
-variable to generate layout & sizing style rules in your CSS codebase.
+Blueprint不提供网格系统。一般来说，您应该尝试使用`$pt-grid-size`变量在您的CSS代码库中生成布局和大小样式规则。
 
-In lieu of a full grid system, you should try to use the __CSS flexible box layout model__ (a.k.a.
-"flexbox"). It's quite powerful on its own and allows you to build robust, responsive layouts
-without writing much CSS. Here are some resources for learning flexbox:
+代替完整的网格系统，您应该尝试使用__CSS弹性盒布局模型___（又名"flexbox"）。它本身是非常强大的，可以让你在不写很多CSS的情况下构建健壮的，响应式的布局。 以下是学习flexbox的一些资源：
 - [MDN guide](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
 - [CSS Tricks guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-@## Layering
+@## Layering|分层
 
-Blueprint provides variables for three z-index layers. This should be enough for most use cases,
-especially if you make correct use of [stacking context][MDN]. [Overlay](#core/components/overlay)
-components such as dialogs and popovers use these z-index values to configure their stacking
-contexts.
+Blueprint为三个z-index层提供变量。 对于大多数使用情况来说，这应该足够了，尤其是在正确使用[stacking context][MDN]的情况下。[Overlay](#core/components/overlay)组件（如对话框和弹出窗口）使用这些z-index值来配置其堆叠上下文。
 
 - `$pt-z-index-base`
 - `$pt-z-index-content`
@@ -80,20 +68,18 @@ contexts.
 
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 
-@## Light theme styles
+@## Light theme styles|亮色主题风格
 
-Use these when you need to build custom UI components that look similar to Blueprint's
-light theme components.
+当您需要构建与Blueprint亮色主题组件相似的自定义UI组件时，请使用这些变量。
 
 - `$pt-dialog-box-shadow`
 - `$pt-input-box-shadow`
 - `$pt-popover-box-shadow`
 - `$pt-tooltip-box-shadow`
 
-@## Dark theme styles
+@## Dark theme styles|暗色主题风格
 
-Use these when you need to build custom UI components that look similar to Blueprint's
-dark theme components.
+当您需要构建与Blueprint暗色主题组件相似的自定义UI组件时，请使用这些变量。
 
 - `$pt-dark-dialog-box-shadow`
 - `$pt-dark-input-box-shadow`
