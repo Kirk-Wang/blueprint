@@ -1,59 +1,45 @@
-@# Buttons
+@# Buttons 按钮
 
-Buttons trigger actions when clicked.
+按钮在点击时触发动作。
 
 @## CSS API
 
-Use the `pt-button` class to access button styles. You should implement buttons using the
-`<button>` or `<a>` tags rather than `<div>` for the purposes of HTML accessibility and semantics.
+使用`pt-button`类来访问按钮样式。出于HTML可访问性和语义的目的，您应该使用`<button>`或`<a>`标签实现按钮，而不是`<div>`。
 
-- Make sure to include `type="button"` on `<button>` tags (use `type="submit"` when used in a
-`<form>`) and `role="button"` on `<a>` tags for accessibility.
-- Add the attribute `tabindex="0"` to make `<a>` tags focusable. `<button>` elements are
-focusable by default.
-- For buttons implemented with `<a>` tags, add `tabindex="-1"` to disabled buttons to prevent the
-user from focusing them by pressing <kbd class="pt-key">tab</kbd> on the keyboard.
-- Note that `<a>` tags do not respond to the `:disabled` attribute; use `.pt-disabled` instead.
+- 为了可访问性，确保在`<button>`标签中包含`type="button"`（在`<form>`中使用`type="submit"`）和`<a>`标签中的`role="button"`。
+- 添加属性`tabindex="0"`使`<a>`标签可以聚焦。`<button>`元素默认是可以聚焦的。
+- 对于使用`<a>`标签实现的按钮，将`tabindex="-1"`添加到禁用按钮，以防止用户通过按下键盘上的<kbd class="pt-key">tab</kbd>来对其进行调焦。
+- 注意`<a>`标签不响应`:disabled`属性; 改用`.pt-disabled`。
 
 @css pt-button
 
-@### Buttons with icons
+@### Buttons with icons|图标按钮
 
-Add an icon before the button text with `pt-icon-*` classes.
-You _do not_ need to include an icon sizing class.
+在按钮文本之前添加一个图标，使用`pt-icon-*`的类。你_不_需要包含一个图标大类。
 
 @css pt-button.pt-icon
 
-@### Advanced icon layout
+@### Advanced icon layout|高级图标布局
 
-You can use a `pt-icon-*` class on a button to add a single icon before the button
-text, but for more advanced icon layouts, use `<span>` tags inside the button.
-Add multiple icons to the same button, or move icons after the text.
+您可以在按钮上使用`pt-icon-*`类在按钮文本之前添加单个图标，但对于更高级的图标布局，可以使用`<span>`标签在按钮内部。将多个图标添加到同一个按钮 ，或移动图标在文字后面。
 
-To adjust margins on right-aligned icons, add the class `pt-align-right` to the icon.
+要调整右对齐图标的边距，请将类`pt-align-right`添加到图标。
 
 @css pt-button.pt-icon-advanced
 
-@### Minimal buttons
+@### Minimal buttons|Minimal按钮
 
-For a subtler button that appears to fade into the UI, add the `.pt-minimal` modifier
-to any `.pt-button`. `pt-minimal` is compatible with all other button modifiers,
-except for `.pt-fill` (due to lack of visual affordances).
+对于似乎淡入UI的一个微妙的按钮，添加`.pt-minimal`修饰符到任何`.pt-button`。 `pt-minimal`与所有其他按钮修饰符兼容，除了`.pt-fill`（由于缺乏视觉效果）。
 
 @css pt-button.pt-minimal
 
 @## JavaScript API
 
-The `Button` and `AnchorButton` components are available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Button`和`AnchorButton`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-Button components render buttons with Blueprint classes and attributes.
-See the [Buttons CSS docs](#core/components/button.css-api) for styling options.
+按钮组件渲染带有Blueprint类和属性的按钮。查看样式选项的[按钮CSS文档](#core/components/button.css-api)。
 
-You can provide your own props to these components as if they were regular JSX HTML elements. If you
-provide a `className` prop, the class names you provide will be added alongside of the default
-Blueprint class name. If you specify other attributes that the component provides, such as a `role`
-for an `<AnchorButton>`, you'll overide the default value.
+您可以为这些组件提供自己的属性，就像它们是常规的JSX HTML元素一样。如果您提供`className`属性，则您提供的类名称将被添加到默认的Blueprint类名称的旁边。如果你指定了组件提供的其他属性，例如`<AnchorButton>`的`role`，你将覆盖默认值。
 
 <div class="pt-callout pt-intent-danger pt-icon-error">
     <h5>Interactions with disabled buttons</h5>

@@ -15,12 +15,12 @@ export type HTMLInputProps = React.HTMLProps<HTMLInputElement>;
  * A shared base interface for all Blueprint component props.
  */
 export interface IProps {
-    /** A space-delimited list of class names to pass along to a child element. */
+    /** 一个传递给子元素的以空格分隔的类名列表。 */
     className?: string;
 }
 
 export interface IIntentProps {
-    /** Visual intent color to apply to element. */
+    /** 应用到元素的视觉意图颜色。 */
     intent?: Intent;
 }
 
@@ -29,25 +29,25 @@ export interface IIntentProps {
  * These props can be spready directly to a `<Button>` or `<MenuItem>` element.
  */
 export interface IActionProps extends IIntentProps, IProps {
-    /** Whether this action is non-interactive. */
+    /** action是否是非交互。 */
     disabled?: boolean;
 
-    /** Name of the icon (the part after `pt-icon-`) to add to the button. */
+    /** 添加到按钮的图标名称（`pt-icon-`之后的部分）。 */
     iconName?: IconName;
 
-    /** Click event handler. */
+    /** 点击事件处理程序。 */
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 
-    /** Action text. */
+    /** action文本。 */
     text?: string;
 }
 
 /** Interface for a link, with support for customizing target window. */
 export interface ILinkProps {
-    /** Link URL. */
+    /** 链接 URL。 */
     href?: string;
 
-    /** Link target attribute. Use `"_blank"` to open in a new window. */
+    /** 链接目标属性。使用`“_blank”`在新窗口中打开。 */
     target?: string;
 }
 

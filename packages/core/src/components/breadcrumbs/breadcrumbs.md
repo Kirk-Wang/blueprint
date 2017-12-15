@@ -9,20 +9,15 @@
 * 每个导航面包屑都应该使用`.pt-breadcrumb`。
 * 用`.pt-disabled`类做一个非交互的面包屑。当您想要指示用户无法导航到面包屑（例如，如果用户没有访问权限）时，您应该只使用此状态。否则，点击面包屑应该把用户带到那个资源。
 * 将最后的面包屑标记为`.pt-breadcrumb-current`，以强调外观。
-* The `.pt-breadcrumbs-collapsed` button-like element can be used as the target for a dropdown menu
-containing breadcrumbs that are collapsed due to layout constraints.
-* When adding another element (such as a [tooltip](#core/components/tooltip) or
-[popover](#core/components/popover)) to a breadcrumb, wrap it around the contents of the `li`.
+* `.pt-breadcrumbs-collapsed`按钮式元素可以用作下拉菜单包含由于布局约束而折叠的面包屑。
+* 当向面包屑添加另一个元素（如[tooltip](#core/components/tooltip)或[popover](#core/components/popover)）时，将其包裹在`li`的内容中。
 
 @css pt-breadcrumbs
 
 @## JavaScript API
 
-The `Breadcrumb` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Breadcrumb`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-The component renders an `a.pt-breadcrumb`. You are responsible for constructing
-the `ul.pt-breadcrumbs` list. [`CollapsibleList`](#core/components/collapsiblelist)
-works nicely with this component because its props are a subset of `IMenuItemProps`.
+该组件渲染为一个`a.pt-breadcrumb`。 你负责构建`ul.pt-breadcrumbs`列表。 [`CollapsibleList`](#core/components/collapsiblelist)与这个组件协作的很好，因为它的属性是`IMenuItemProps`的一个子集。
 
 @interface IBreadcrumbProps
