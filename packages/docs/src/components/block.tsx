@@ -24,7 +24,7 @@ export function renderContentsBlock(
                 throw new Error(`Unknown @tag: ${node.tag}`);
             }
             if (node.tag === "heading") {
-                node.value = node.value.split('|')[1] || node.value;
+                node.value = node.value.split("|")[1] || node.value;
             }
             return renderer(node, i, tagRenderers, page);
         } catch (ex) {
