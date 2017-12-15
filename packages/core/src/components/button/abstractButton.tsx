@@ -16,28 +16,28 @@ import { Spinner } from "../spinner/spinner";
 
 export interface IButtonProps extends IActionProps {
     /**
-     * If set to `true`, the button will display in an active state.
-     * This is equivalent to setting `className="pt-active"`.
+     * 如果设置为`true`，则按钮将显示为激活状态。
+     * 这相当于设置`className="pt-active"`。
      * @default false
      */
     active?: boolean;
 
-    /** A ref handler that receives the native HTML element backing this component. */
+    /** 一个ref处理器，它接受这个组件背后的原生HTML元素 */
     elementRef?: (ref: HTMLElement) => any;
 
-    /** Name of the icon (the part after `pt-icon-`) to add to the button. */
+    /** 添加到按钮的图标名称（`pt-icon-`之后的部分）。 */
     rightIconName?: IconName;
 
     /**
-     * If set to `true`, the button will display a centered loading spinner instead of its contents.
-     * The width of the button is not affected by the value of this prop.
+     * 如果设置为`true`，则该按钮将显示一个居中的加载spinner，而不是其内容。
+     * 该按钮的宽度不受此属性值的影响。
      * @default false
      */
     loading?: boolean;
 
     /**
-     * HTML `type` attribute of button. Common values are `"button"` and `"submit"`.
-     * Note that this prop has no effect on `AnchorButton`; it only affects `Button`.
+     * 按钮的HTML`type`属性。常用的值是`"button"`和`"submit"`。
+     * 请注意，这个属性对`AnchorButton`没有任何影响。它只影响`Button`。
      * @default "button"
      */
     type?: string;
