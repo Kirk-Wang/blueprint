@@ -1,4 +1,4 @@
-@# Button groups|按钮组
+@# Button groups 按钮组
 
 按钮组，水平或垂直排列多个按钮为一组。
 
