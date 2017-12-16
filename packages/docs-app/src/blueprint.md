@@ -1,4 +1,4 @@
-@# Blueprint
+@# Blueprint 蓝图
 
 Blueprint是一个针对web的，基于React的UI toolkit。
 

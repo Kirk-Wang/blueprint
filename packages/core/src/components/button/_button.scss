@@ -8,19 +8,19 @@
 Button
 
 Markup:
-<a role="button" class="pt-button {{.modifier}}" {{:modifier}} tabindex="0">Anchor</a>
-<button type="button" class="pt-button pt-icon-add {{.modifier}}" {{:modifier}}>Button</button>
+<a role="button" class="pt-button {{.modifier}}" {{:modifier}} tabindex="0">锚点</a>
+<button type="button" class="pt-button pt-icon-add {{.modifier}}" {{:modifier}}>按钮</button>
 
-:disabled - Disabled state
-.pt-disabled - Disabled appearance
-.pt-intent-primary - Primary intent
-.pt-intent-success - Success intent
-.pt-intent-warning - Warning intent
-.pt-intent-danger - Danger intent
-.pt-active - Active appearance
-.pt-large - Larger size
-.pt-small - Smaller size
-.pt-fill - Fill parent container
+:disabled - 禁用的状态
+.pt-disabled - 禁用的外观
+.pt-intent-primary - 主要视觉意图
+.pt-intent-success - 成功视觉意图
+.pt-intent-warning - 警告视觉意图
+.pt-intent-danger - 危险视觉意图
+.pt-active - 激活的外观
+.pt-large - 更大的尺寸
+.pt-small - 较小的尺寸
+.pt-fill - 填充父容器
 
 Styleguide pt-button
 */
@@ -74,9 +74,9 @@ Styleguide pt-button
   Buttons with icons
 
   Markup:
-  <button type="button" class="pt-button pt-icon-add">Default button</button>
+  <button type="button" class="pt-button pt-icon-add">默认按钮</button>
   <button type="button" class="pt-button pt-icon-refresh"></button>
-  <button type="button" class="pt-button pt-large pt-icon-add">Large button</button>
+  <button type="button" class="pt-button pt-large pt-icon-add">大按钮</button>
   <button type="button" class="pt-button pt-large pt-icon-refresh"></button>
 
   Styleguide pt-button.pt-icon
@@ -92,21 +92,21 @@ Styleguide pt-button
 
   Markup:
   <button type="button" class="pt-button pt-intent-success">
-    Next step
+    下一步
     <span class="pt-icon-standard pt-icon-arrow-right pt-align-right"></span>
   </button>
   <button type="button" class="pt-button">
     <span class="pt-icon-standard pt-icon-user"></span>
-    Profile settings
+    配置文件设置
     <span class="pt-icon-standard pt-icon-caret-down pt-align-right"></span>
   </button>
   <button type="button" class="pt-button pt-intent-danger">
-    Reset
+    重置
     <span class="pt-icon-standard pt-icon-refresh pt-align-right"></span>
   </button>
   <button type="button" class="pt-button pt-large">
     <span class="pt-icon-standard pt-icon-document"></span>
-    upload.txt
+    上传.txt
     <span class="pt-icon-standard pt-icon-cross pt-align-right"></span>
   </button>
 
@@ -164,14 +164,14 @@ Styleguide pt-button
   Minimal buttons
 
   Markup:
-  <a role="button" class="pt-button pt-minimal {{.modifier}}" {{:modifier}} tabindex="0">Anchor</a>
-  <button type="button" class="pt-button pt-minimal pt-icon-add {{.modifier}}" {{:modifier}}>Button</button>
+  <a role="button" class="pt-button pt-minimal {{.modifier}}" {{:modifier}} tabindex="0">锚点</a>
+  <button type="button" class="pt-button pt-minimal pt-icon-add {{.modifier}}" {{:modifier}}>按钮</button>
 
-  .pt-disabled - Disabled appearance
-  .pt-intent-primary - Primary intent
-  .pt-intent-success - Success intent
-  .pt-intent-warning - Warning intent
-  .pt-intent-danger - Danger intent
+  .pt-disabled - 禁用的外观
+  .pt-intent-primary - 主要视觉意图
+  .pt-intent-success - 成功视觉意图
+  .pt-intent-warning - 警告视觉意图
+  .pt-intent-danger - 危险视觉意图
 
   Styleguide pt-button.pt-minimal
   */

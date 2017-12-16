@@ -27,7 +27,7 @@
 
 @css pt-button.pt-icon-advanced
 
-@### Minimal buttons|Minimal按钮
+@### Minimal buttons|迷你按钮
 
 对于似乎淡入UI的一个微妙的按钮，添加`.pt-minimal`修饰符到任何`.pt-button`。 `pt-minimal`与所有其他按钮修饰符兼容，除了`.pt-fill`（由于缺乏视觉效果）。
 
@@ -53,19 +53,19 @@
 
 @reactExample ButtonsExample
 
-@### Anchor button
+@### Anchor button|锚点按钮
 
 ```jsx
-<AnchorButton text="Click" />
-// renders:
-<a class="pt-button" role="button" tabIndex={0}>Click</a>
+<AnchorButton text="单击" />
+// 渲染为:
+<a class="pt-button" role="button" tabIndex={0}>单击</a>
 ```
 
-@### Button
+@### Button|按钮
 
 ```jsx
-<Button iconName="refresh" />
-// renders:
+<Button iconName="刷新" />
+// 渲染为:
 <button class="pt-button pt-icon-refresh" type="button"></button>
 ```
 

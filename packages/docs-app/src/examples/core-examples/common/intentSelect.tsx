@@ -8,11 +8,11 @@ import { Classes, Intent } from "@blueprintjs/core";
 import * as React from "react";
 
 const INTENTS = [
-    { label: "None", value: Intent.NONE },
-    { label: "Primary", value: Intent.PRIMARY },
-    { label: "Success", value: Intent.SUCCESS },
-    { label: "Warning", value: Intent.WARNING },
-    { label: "Danger", value: Intent.DANGER },
+    { label: "无", value: Intent.NONE },
+    { label: "主要", value: Intent.PRIMARY },
+    { label: "成功", value: Intent.SUCCESS },
+    { label: "警告", value: Intent.WARNING },
+    { label: "危险", value: Intent.DANGER },
 ];
 
 export interface IIntentSelectProps {
@@ -22,7 +22,7 @@ export interface IIntentSelectProps {
 
 export const IntentSelect: React.SFC<IIntentSelectProps> = props => (
     <label className={Classes.LABEL}>
-        Intent
+        视觉意图
         <div className={Classes.SELECT}>
             <select value={props.intent} onChange={props.onChange}>
                 {INTENTS.map((opt, i) => (

@@ -23,7 +23,7 @@ export class AlertExample extends BaseExample<{}> {
     private toaster: IToaster;
     private message: JSX.Element = (
         <div>
-            <strong>filename</strong> was moved to Trash
+            <strong>文件名</strong>已移至垃圾箱
         </div>
     );
 
@@ -34,31 +34,27 @@ export class AlertExample extends BaseExample<{}> {
     protected renderExample() {
         return (
             <div>
-                <Button onClick={this.handleOpenError} text="Open file error alert" />
+                <Button onClick={this.handleOpenError} text="打开文件错误警告" />
                 <Alert
                     className={this.props.themeName}
                     isOpen={this.state.isOpenError}
-                    confirmButtonText="Okay"
+                    confirmButtonText="确定"
                     onConfirm={this.handleCloseError}
                 >
-                    <p>
-                        Couldn't create the file because the containing folder doesn't exist anymore. You will be
-                        redirected to your user folder.
-                    </p>
+                    <p>无法创建文件，因为包含的文件夹不再存在。您将被重定向到您的用户文件夹。</p>
                 </Alert>
-                <Button onClick={this.handleOpen} text="Open file deletion alert" />
+                <Button onClick={this.handleOpen} text="打开文件删除警告" />
                 <Alert
                     className={this.props.themeName}
                     intent={Intent.PRIMARY}
                     isOpen={this.state.isOpen}
-                    confirmButtonText="Move to Trash"
-                    cancelButtonText="Cancel"
+                    confirmButtonText="移到回收站"
+                    cancelButtonText="取消"
                     onConfirm={this.handleMoveClose}
                     onCancel={this.handleClose}
                 >
                     <p>
-                        Are you sure you want to move <b>filename</b> to Trash? You will be able to restore it later,
-                        but it will become private to you.
+                        您确定要将<b>文件名</b>移至垃圾箱吗？你以后可以恢复它，并且它对你来说是私有的。
                     </p>
                 </Alert>
             </div>

@@ -53,7 +53,7 @@ export class ButtonsExample extends BaseExample<IButtonsExampleState> {
         return (
             <div className="docs-react-example-row">
                 <div className="docs-react-example-column">
-                    <code>Button</code>
+                    <code>按钮</code>
                     <br />
                     <br />
                     <Button
@@ -64,11 +64,11 @@ export class ButtonsExample extends BaseExample<IButtonsExampleState> {
                         intent={this.state.intent}
                         loading={this.state.loading}
                         onClick={this.beginWiggling}
-                        text="Click to wiggle"
+                        text="点击摇摆"
                     />
                 </div>
                 <div className="docs-react-example-column">
-                    <code>AnchorButton</code>
+                    <code>锚点按钮</code>
                     <br />
                     <br />
                     <AnchorButton
@@ -81,7 +81,7 @@ export class ButtonsExample extends BaseExample<IButtonsExampleState> {
                         loading={this.state.loading}
                         rightIconName="share"
                         target="_blank"
-                        text="Duplicate this page"
+                        text="复制此页面"
                     />
                 </div>
             </div>
@@ -92,26 +92,26 @@ export class ButtonsExample extends BaseExample<IButtonsExampleState> {
         return [
             [
                 <label className={Classes.LABEL} key="label">
-                    Modifiers
+                    修饰符
                 </label>,
-                <Switch checked={this.state.active} key="active" label="Active" onChange={this.handleActiveChange} />,
+                <Switch checked={this.state.active} key="active" label="激活" onChange={this.handleActiveChange} />,
                 <Switch
                     checked={this.state.disabled}
                     key="disabled"
-                    label="Disabled"
+                    label="禁用"
                     onChange={this.handleDisabledChange}
                 />,
-                <Switch checked={this.state.large} key="large" label="Large" onChange={this.handleLargeChange} />,
+                <Switch checked={this.state.large} key="large" label="大的" onChange={this.handleLargeChange} />,
                 <Switch
                     checked={this.state.loading}
                     key="loading"
-                    label="Loading"
+                    label="加载中"
                     onChange={this.handleLoadingChange}
                 />,
                 <Switch
                     checked={this.state.minimal}
                     key="minimal"
-                    label="Minimal"
+                    label="迷你的"
                     onChange={this.handleMinimalChange}
                 />,
             ],

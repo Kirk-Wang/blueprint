@@ -29,7 +29,14 @@
     "lint-fix": "lerna run --parallel lint-fix",
     "test": "lerna run --parallel test",
     "verify": "npm-run-all -s compile dist:libs dist:apps -p test lint",
-    "serve": "http-server docs"
+    "serve": "http-server docs",
+    "publish:core": "lerna run compile --scope '@blueprintjs/core'",
+    "publish:data": "lerna run compile --scope '@blueprintjs/docs-data'",
+    "publish:docs": "lerna run dist --scope '@blueprintjs/docs'",
+    "publish:docs-app": "lerna run dist --scope '@blueprintjs/docs-app'",
+    "publish:landing-app": "lerna run dist --scope '@blueprintjs/landing-app'",
+    "publish:copy": "rm -rf ./docs ./docs.zip && npm-run-all copy-docs-app copy-landing-app && cross-zip ./docs ./docs.zip",
+    "publish": "npm-run-all publish:*"
   },
   "dependencies": {
     "@types/chai": "^4.0.4",
@@ -69,5 +76,8 @@
     "url": "git@github.com:palantir/blueprint.git"
   },
   "author": "Palantir Technologies",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cross-zip-cli": "^1.0.0"
+  }
 }
