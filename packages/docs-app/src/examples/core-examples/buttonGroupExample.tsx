@@ -36,9 +36,9 @@ export class ButtonGroupExample extends BaseExample<IButtonGroupExampleState> {
         const style: React.CSSProperties = { flexGrow: this.state.fill ? 1 : undefined };
         return (
             <ButtonGroup style={style} {...this.state}>
-                <Button iconName="database">Queries</Button>
-                <Button iconName="function">Functions</Button>
-                <AnchorButton rightIconName="caret-down">Options</AnchorButton>
+                <Button iconName="database">查询</Button>
+                <Button iconName="function">函数</Button>
+                <AnchorButton rightIconName="caret-down">选项</AnchorButton>
             </ButtonGroup>
         );
     }
@@ -46,18 +46,18 @@ export class ButtonGroupExample extends BaseExample<IButtonGroupExampleState> {
     protected renderOptions() {
         return [
             [
-                <Switch checked={this.state.fill} key="fill" label="Fill" onChange={this.handleFillChange} />,
-                <Switch checked={this.state.large} key="large" label="Large" onChange={this.handleLargeChange} />,
+                <Switch checked={this.state.fill} key="fill" label="填充" onChange={this.handleFillChange} />,
+                <Switch checked={this.state.large} key="large" label="大的" onChange={this.handleLargeChange} />,
                 <Switch
                     checked={this.state.minimal}
                     key="minimal"
-                    label="Minimal"
+                    label="迷你的"
                     onChange={this.handleMinimalChange}
                 />,
                 <Switch
                     checked={this.state.vertical}
                     key="vertical"
-                    label="Vertical"
+                    label="垂直的"
                     onChange={this.handleVerticalChange}
                 />,
             ],

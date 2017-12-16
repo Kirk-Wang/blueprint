@@ -36,7 +36,7 @@
     "publish:docs-app": "lerna run dist --scope '@blueprintjs/docs-app'",
     "publish:landing-app": "lerna run dist --scope '@blueprintjs/landing-app'",
     "publish:copy": "rm -rf ./docs ./docs.zip && npm-run-all copy-docs-app copy-landing-app && cross-zip ./docs ./docs.zip",
-    "publish": "npm-run-all publish:*"
+    "publish": "npm-run-all publish:* && sh publish.sh"
   },
   "dependencies": {
     "@types/chai": "^4.0.4",

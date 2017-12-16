@@ -27,3 +27,4 @@ docs/**/*.d.ts
 docs/assets/inline
 tmp.md
 docs.zip
+publish.sh

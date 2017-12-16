@@ -12,25 +12,25 @@ import { IProps } from "../../common/props";
 
 export interface IButtonGroupProps extends IProps, React.HTMLProps<HTMLDivElement> {
     /**
-     * Whether the button group should take up the full width of its container.
+     * 按钮组是否应占用其容器的整个宽度。
      * @default false
      */
     fill?: boolean;
 
     /**
-     * Whether the child buttons should appear with minimal styling.
+     * 是否应以迷你的风格显示子按钮。
      * @default false
      */
     minimal?: boolean;
 
     /**
-     * Whether the child buttons should appear with large styling.
+     * 是否应以大的风格显示子按钮。
      * @default false
      */
     large?: boolean;
 
     /**
-     * Whether the button group should appear with vertical styling.
+     * 按钮组是否应该以垂直风格显示。
      * @default false
      */
     vertical?: boolean;

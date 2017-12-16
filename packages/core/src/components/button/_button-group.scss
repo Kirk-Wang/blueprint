@@ -10,10 +10,10 @@ Button groups
 
 Markup:
 <div class="pt-button-group {{.modifier}}">
-  <a class="pt-button pt-icon-database" tabindex="0" role="button">Queries</a>
-  <a class="pt-button pt-icon-function" tabindex="0" role="button">Functions</a>
+  <a class="pt-button pt-icon-database" tabindex="0" role="button">查询</a>
+  <a class="pt-button pt-icon-function" tabindex="0" role="button">函数</a>
   <a class="pt-button" tabindex="0" role="button">
-    Options <span class="pt-icon-standard pt-icon-caret-down pt-align-right"></span>
+    选项 <span class="pt-icon-standard pt-icon-caret-down pt-align-right"></span>
   </a>
 </div>
 <br /><br />
@@ -30,13 +30,12 @@ Markup:
 </div>
 <br /><br />
 <div class="pt-button-group {{.modifier}}">
-  <button type="button" class="pt-button pt-intent-success">Save</button>
+  <button type="button" class="pt-button pt-intent-success">保存</button>
   <button type="button" class="pt-button pt-intent-success pt-icon-caret-down"></button>
 </div>
 
-.pt-large - Use large buttons
-.pt-minimal - Use minimal buttons. Note that these minimal buttons will not automatically
-              truncate text in an ellipsis because of the divider line added in CSS.
+.pt-large - 使用大按钮
+.pt-minimal - 使用迷你按钮。请注意，由于在CSS中添加了分隔线，因此这些迷你按钮不会自动截断省略号中的文本。
 
 Styleguide pt-button-group
 */
@@ -154,16 +153,16 @@ Styleguide pt-button-group
 
   Markup:
   <div class="pt-button-group pt-large pt-fill">
-    <a class="pt-button pt-intent-primary pt-fixed" tabindex="0" role="button">Start</a>
-    <a class="pt-button pt-intent-primary" tabindex="0" role="button">Left</a>
-    <a class="pt-button pt-intent-primary pt-active" tabindex="0" role="button">Middle</a>
-    <a class="pt-button pt-intent-primary" tabindex="0" role="button">Right</a>
-    <a class="pt-button pt-intent-primary pt-fixed" tabindex="0" role="button">End</a>
+    <a class="pt-button pt-intent-primary pt-fixed" tabindex="0" role="button">开端</a>
+    <a class="pt-button pt-intent-primary" tabindex="0" role="button">左边</a>
+    <a class="pt-button pt-intent-primary pt-active" tabindex="0" role="button">中间</a>
+    <a class="pt-button pt-intent-primary" tabindex="0" role="button">右边</a>
+    <a class="pt-button pt-intent-primary pt-fixed" tabindex="0" role="button">终端</a>
   </div>
   <br />
   <div class="pt-button-group pt-fill">
     <button class="pt-button pt-icon-arrow-left"></button>
-    <button class="pt-button pt-fill">Middle</button>
+    <button class="pt-button pt-fill">中间</button>
     <button class="pt-button pt-icon-arrow-right"></button>
   </div>
 
@@ -190,15 +189,15 @@ Styleguide pt-button-group
     <a class="pt-button pt-icon-zoom-to-fit" role="button" tabindex="0"></a>
   </div>
   <div class="pt-button-group pt-vertical">
-    <button type="button" class="pt-button pt-active">Home</button>
-    <button type="button" class="pt-button">Pages</button>
-    <button type="button" class="pt-button">Blog</button>
-    <button type="button" class="pt-button">Calendar</button>
+    <button type="button" class="pt-button pt-active">首页</button>
+    <button type="button" class="pt-button">页面</button>
+    <button type="button" class="pt-button">博客</button>
+    <button type="button" class="pt-button">日历</button>
   </div>
   <div class="pt-button-group pt-vertical pt-align-left pt-large">
-    <button type="button" class="pt-button pt-intent-primary pt-icon-document">Text</button>
-    <button type="button" class="pt-button pt-intent-primary pt-icon-media pt-active">Media</button>
-    <button type="button" class="pt-button pt-intent-primary pt-icon-link">Sources</button>
+    <button type="button" class="pt-button pt-intent-primary pt-icon-document">文本</button>
+    <button type="button" class="pt-button pt-intent-primary pt-icon-media pt-active">媒体</button>
+    <button type="button" class="pt-button pt-intent-primary pt-icon-link">来源</button>
   </div>
 
   Styleguide pt-button-group.pt-vertical
