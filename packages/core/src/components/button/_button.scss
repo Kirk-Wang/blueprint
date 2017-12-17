@@ -13,7 +13,7 @@ Markup:
 
 :disabled - 禁用的状态
 .pt-disabled - 禁用的外观
-.pt-intent-primary - 主要视觉意图
+.pt-intent-primary - 主视觉意图
 .pt-intent-success - 成功视觉意图
 .pt-intent-warning - 警告视觉意图
 .pt-intent-danger - 危险视觉意图
@@ -168,7 +168,7 @@ Styleguide pt-button
   <button type="button" class="pt-button pt-minimal pt-icon-add {{.modifier}}" {{:modifier}}>按钮</button>
 
   .pt-disabled - 禁用的外观
-  .pt-intent-primary - 主要视觉意图
+  .pt-intent-primary - 主视觉意图
   .pt-intent-success - 成功视觉意图
   .pt-intent-warning - 警告视觉意图
   .pt-intent-danger - 危险视觉意图

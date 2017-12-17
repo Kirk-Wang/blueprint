@@ -26,10 +26,10 @@ export class CardExample extends BaseExample<ICardExampleState> {
         return (
             <Card {...this.state}>
                 <h5>
-                    <a href="#">Card heading</a>
+                    <a href="#">卡片标题</a>
                 </h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <Button text="Submit" className={Classes.BUTTON} />
+                <Button text="提交" className={Classes.BUTTON} />
             </Card>
         );
     }

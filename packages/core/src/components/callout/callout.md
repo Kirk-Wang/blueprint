@@ -1,24 +1,21 @@
-@# Callouts
+@# Callouts 标注
 
-Callouts visually highlight important content for the user.
+在视觉上突出显示用户的重要内容。
 
 @## CSS API
 
-Callouts use the same visual intent modifier classes as buttons. If you need a
-heading, use the `<h5>` element.
+标注使用与按钮相同的视觉意图修饰符类。如果你需要一个标题，使用`<h5>`元素。
 
 <div class="pt-callout pt-intent-primary pt-icon-info-sign">
-    Note that the `<h5>` heading is entirely optional.
+    请注意，`<h5>`标题完全是可选的。
 </div>
 
 @css pt-callout
 
 @## JavaScript API
 
-The `Callout` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Callout`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-The component is a simple wrapper around the CSS API that provides props for modifiers and optional title element.
-Any additional HTML props will be spread to the rendered `<div>` element.
+该组件是围绕CSS API的简单包装器，为修饰符和可选标题元素提供了属性。任何额外的HTML属性都将传播到渲染的`<div>`元素。
 
 @interface ICalloutProps

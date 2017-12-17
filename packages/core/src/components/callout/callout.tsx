@@ -13,14 +13,13 @@ import { IconName } from "../icon/icon";
 
 /** This component also supports the full range of HTML `<div>` props. */
 export interface ICalloutProps extends IIntentProps, IProps {
-    /** Name of icon to render on left-hand side. */
+    /** 要在左侧渲染的图标名称。 */
     iconName?: IconName;
 
     /**
-     * String content of optional title element.
+     * 可选标题元素的字符串内容。
      *
-     * Due to a conflict with the HTML prop types, to provide JSX content simply pass
-     * `<h5>JSX title content<h5>` as first `children` element instead of using this prop.
+     * 由于与HTML属性类型的冲突，为了提供JSX内容，只需将`<h5>JSX标题内容<h5>`作为第一个`children`元素来传递，而不是使用这个属性。
      */
     title?: string;
 }

@@ -12,28 +12,22 @@ import { IProps } from "../../common/props";
 
 export interface ICardProps extends IProps {
     /**
-     * Controls the intensity of the drop shadow beneath the card: the higher
-     * the elevation, the higher the drop shadow. At elevation `0`, no drop
-     * shadow is applied.
-     *
+     * 控制卡片下方阴影的强度：高度越高，阴影越高。在高度`0`处，不应用阴影。
      * @default 0
      */
     elevation?: Elevation;
 
     /**
-     * Whether the card should respond to user interactions. If set to `true`,
-     * hovering over the card will increase the card's elevation
-     * and change the mouse cursor to a pointer.
+     * 卡片是否应该响应用户交互。如果设置为`true`，则悬停在卡片上将增加卡片的高度，并将鼠标光标改为指针。
      *
-     * Recommended when `onClick` is also defined.
-     *
+     * 当`onClick`也被定义时推荐。
      * @default false
      */
     interactive?: boolean;
 
     /**
-     * Callback invoked when the card is clicked.
-     * Recommended when `interactive` is `true`.
+     * 单击卡片时调用的回调。
+     * 当`interactive`是`true`时推荐。
      */
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
