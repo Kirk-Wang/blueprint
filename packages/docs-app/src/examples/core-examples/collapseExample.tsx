@@ -27,7 +27,7 @@ export class CollapseExample extends BaseExample<ICollapseExampleState> {
     protected renderExample() {
         return (
             <div>
-                <Button onClick={this.handleClick}>{this.state.isOpen ? "Hide" : "Show"} build logs</Button>
+                <Button onClick={this.handleClick}>{this.state.isOpen ? "隐藏" : "显示"}构建日志</Button>
                 <Collapse isOpen={this.state.isOpen} keepChildrenMounted={this.state.keepChildrenMounted}>
                     <pre>
                         [11:53:30] Finished 'typescript-bundle-blueprint' after 769 ms<br />

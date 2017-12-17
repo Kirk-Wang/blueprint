@@ -13,28 +13,28 @@ import { IProps } from "../../common/props";
 
 export interface ICollapseProps extends IProps {
     /**
-     * Component to render as the root element.
-     * Useful when rendering a `Collapse` inside a `<table>`, for instance.
+     * 作为根元素渲染的组件。
+     * 例如，在`<table>`内渲染`Collapse`时很有用。
      * @default "div"
      */
     component?: React.ReactType;
 
     /**
-     * Whether the component is open or closed.
+     * 组件是打开还是关闭。
      * @default false
      */
     isOpen?: boolean;
 
     /**
-     * Whether the child components will remain mounted when the `Collapse` is closed.
-     * Setting to true may improve performance by avoiding re-mounting children.
+     * 当`Collapse`关闭时，子组件是否保持挂载状态。
+     * 设置为true可避免重新挂载子元素，从而提高性能。
      * @default false
      */
     keepChildrenMounted?: boolean;
 
     /**
-     * The length of time the transition takes, in milliseconds. This must match the duration of the animation in CSS.
-     * Only set this prop if you override Blueprint's default transitions with new transitions of a different length.
+     * 动画变换所需的时间，以毫秒为单位。这必须与CSS中动画的持续时间相匹配。
+     * 如果您使用了不同时间长度的新转场动画覆盖Blueprint的默认转场，请设置此属性。
      * @default 200
      */
     transitionDuration?: number;

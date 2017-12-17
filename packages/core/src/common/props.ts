@@ -15,7 +15,7 @@ export type HTMLInputProps = React.HTMLProps<HTMLInputElement>;
  * A shared base interface for all Blueprint component props.
  */
 export interface IProps {
-    /** 一个传递给子元素的以空格分隔的类名列表。 */
+    /** 传递给子元素的以空格分隔的类名列表。 */
     className?: string;
 }
 
