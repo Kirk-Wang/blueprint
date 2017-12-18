@@ -1,27 +1,20 @@
-@# Collapsible list
+@# Collapsible list 可折叠列表
 
-The `CollapsibleList` React component accepts a list of menu items and a count of visible items. It
-shows precisely that many items and collapses the rest into a dropdown menu. The required
-`visibleItemRenderer` callback prop allows for customizing the appearance of visible items, using the
-props from the `MenuItem` children.
+`CollapsibleList`React组件接受菜单项目列表和可见项目的计数。它精确地显示了许多项目，并将其余部分折叠到下拉菜单中。所需的`visibleItemRenderer`回调属性允许使用`MenuItem`子元素中的属性自定义可见项的外观。
 
 @reactExample CollapsibleListExample
 
 @## JavaScript API
 
-The `CollapsibleList` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`CollapsibleList`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-Children of the `CollapsibleList` component _must_ be `MenuItem`s so they can be easily rendered
-in the dropdown. Define a `visibleItemRenderer` callback to customize the appearance of visible
-items using their [`IMenuItemProps`](#core/components/menu.menu-item).
+`CollapsibleList`组件的子元素_必须_是`MenuItem`，这样他们可以很容易地在下拉列表中呈现。定义一个`visibleItemRenderer`回调来定制可见项的外观，使用它们的[`IMenuItemProps`](#core/components/menu.menu-item)。
 
 @interface ICollapsibleListProps
 
-@## Separators
+@## Separators|分隔符
 
-Often a list of items calls for separators between each item.
-Adding separators to a `CollapsibleList` is easily achieved via CSS using `::after` pseudo-elements.
+通常情况下，项目列表需要在每个项目之间进行分隔。将分隔符添加到`CollapsibleList`，通过使用CSS的`::after`伪元素很容易实现。
 
 ```css.scss
 // pass `visibleItemClassName="my-list-item"` to component, then...

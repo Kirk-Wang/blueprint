@@ -24,8 +24,8 @@ export interface ICollapsibleListExampleState {
 }
 
 const COLLAPSE_FROM_RADIOS = [
-    { className: Classes.INLINE, label: "Start", value: CollapseFrom.START.toString() },
-    { className: Classes.INLINE, label: "End", value: CollapseFrom.END.toString() },
+    { className: Classes.INLINE, label: "开端", value: CollapseFrom.START.toString() },
+    { className: Classes.INLINE, label: "末端", value: CollapseFrom.END.toString() },
 ];
 
 export class CollapsibleListExample extends BaseExample<ICollapsibleListExampleState> {
@@ -44,10 +44,10 @@ export class CollapsibleListExample extends BaseExample<ICollapsibleListExampleS
                 dropdownTarget={<span className={Classes.BREADCRUMBS_COLLAPSED} />}
                 visibleItemRenderer={this.renderBreadcrumb}
             >
-                <MenuItem iconName="folder-close" text="All files" href="#" />
-                <MenuItem iconName="folder-close" text="Users" href="#" />
+                <MenuItem iconName="folder-close" text="所有文件" href="#" />
+                <MenuItem iconName="folder-close" text="用户" href="#" />
                 <MenuItem iconName="folder-close" text="Jane Person" href="#" />
-                <MenuItem iconName="folder-close" text="My documents" href="#" />
+                <MenuItem iconName="folder-close" text="我的文档" href="#" />
                 <MenuItem iconName="folder-close" text="Classy dayjob" href="#" />
                 <MenuItem iconName="document" text="How to crush it" />
             </CollapsibleList>
@@ -58,7 +58,7 @@ export class CollapsibleListExample extends BaseExample<ICollapsibleListExampleS
         return [
             [
                 <label className={Classes.LABEL} key="visible-label">
-                    Visible items
+                    可见项
                 </label>,
                 <Slider
                     key="visible"
@@ -72,7 +72,7 @@ export class CollapsibleListExample extends BaseExample<ICollapsibleListExampleS
                 <RadioGroup
                     key="collapseFrom"
                     name="collapseFrom"
-                    label="Collapse from"
+                    label="折叠方向"
                     onChange={this.handleChangeCollapse}
                     options={COLLAPSE_FROM_RADIOS}
                     selectedValue={this.state.collapseFrom.toString()}

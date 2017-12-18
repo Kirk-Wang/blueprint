@@ -24,34 +24,33 @@ export enum CollapseFrom {
 
 export interface ICollapsibleListProps extends IProps {
     /**
-     * Element to render as dropdown target with `CLICK` interaction to show collapsed menu.
+     * 元素作为下拉列表渲染的目标，通过`CLICK`交互显示折叠菜单
      */
     dropdownTarget: JSX.Element;
 
     /**
-     * Props to pass to the dropdown.
+     * 传递到下拉列表的属性。
      */
     dropdownProps?: IPopoverProps;
 
     /**
-     * Callback invoked to render each visible item. The item will be wrapped in an `li` with
-     * the optional `visibleItemClassName` prop.
+     * 被调用来渲染每个可见项目的回调。该项目将被包裹在一个带有可选的`visibleItemClassName`属性的`li`中。
      */
     visibleItemRenderer: (props: IMenuItemProps, index: number) => JSX.Element;
 
     /**
-     * Which direction the items should collapse from: start or end of the children.
+     * 项目应该从哪个方向折叠：子元素的开始或结束。
      * @default CollapseFrom.START
      */
     collapseFrom?: CollapseFrom;
 
     /**
-     * CSS class names to add to `<li>` tags containing each visible item and the dropdown.
+     * 添加到`<li>`标签的CSS类名称，包含每个可见项目和下拉列表。
      */
     visibleItemClassName?: string;
 
     /**
-     * Exact number of visible items.
+     * 确切的可见项目数量。
      * @default 3
      */
     visibleItemCount?: number;
