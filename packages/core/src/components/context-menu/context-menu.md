@@ -1,38 +1,28 @@
-@# Context menus
+@# Context menus|上下文菜单
 
-Context menus present the user with a custom list of actions upon right-click.
+上下文菜单在用户右键单击时显示一个自定义的操作列表。
 
-You can create context menus in either of the following ways:
+您可以通过以下任一方式创建上下文菜单：
 
-- by adding the `@ContextMenuTarget` [decorator](#core/components/context-menu.javascript-api--decorator)
-  to a React component that implements `renderContextMenu(): JSX.Element`.
-- via the [imperative](#core/components/context-menu.javascript-api--imperative) `ContextMenu.show`
-  and `ContextMenu.hide` API methods, ideal for non-React-based applications.
+- 通过将`@ContextMenuTarget`[装饰器](#core/components/context-menu.javascript-api--decorator)添加到实现`renderContextMenu(): JSX.Element`的React组件。
+- 通过[命令式](#core/components/context-menu.javascript-api--imperative)的ContextMenu.show和ContextMenu.hide API方法，非常适用于基于非React的应用程序。
 
 @reactExample ContextMenuExample
 
-@## JavaScript API: decorator
+@## JavaScript API:装饰器
 
-The `ContextMenuTarget` decorator is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`ContextMenuTarget`装饰器在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-The `@ContextMenuTarget` [class decorator][ts-decorator] can be applied to any `React.Component`
-class that meets the following requirements:
+`@ContextMenuTarget`[类装饰器][ts-decorator]可以应用于任何满足以下要求的`React.Component`类：
 
-- It defines an instance method called `renderContextMenu()` that returns a single `JSX.Element`
-(most likely a [`Menu`](#core/components/menu)) or `undefined`.
-- Its root element supports the `"contextmenu"` event and the `onContextMenu` prop.
+- 它定义了一个名为`renderContextMenu()`的实例方法，它返回一个`JSX.Element`（多数可能是一个[`Menu`](#core/components/menu)）或`undefined`。
+- 它的根元素支持`"contextmenu"`事件和`onContextMenu`属性。
 
-This is always true if the decorated class uses an intrinsic element, such as `<div>`, as its
-root. If it uses a custom element as its root, you must ensure that the prop is implemented
-correctly for that element.
+如果装饰类使用一个内部元素（如`<div>`）作为它的根，则总是可以的。如果它使用自定义元素作为其根，则必须确保该元素的属性是正确实现的。
 
-When the user triggers the `"contextmenu"` event on the decorated class, `renderContextMenu()` is
-called. If `renderContextMenu()` returns an element, the browser's native [context menu][wiki-cm] is
-blocked and the returned element is displayed instead in a `Popover` at the cursor's location.
+当用户触发装饰类上的`"contextmenu"`事件时，会调用`renderContextMenu()`。 如果`renderContextMenu()`返回一个元素，则浏览器的内置[上下文菜单][wiki-cm]被阻塞，它返回的元素将被显示在光标位置的`Popover`中。
 
-If the instance has a `onContextMenuClose` method, the decorator will call this function when
-the context menu is closed.
+如果实例有一个`onContextMenuClose`方法，当上下文菜单关闭时，装饰器将调用这个函数。
 
 ```tsx
 import { ContextMenuTarget, Menu, MenuItem } from "@blueprintjs/core";
@@ -40,12 +30,12 @@ import { ContextMenuTarget, Menu, MenuItem } from "@blueprintjs/core";
 @ContextMenuTarget
 class RightClickMe extends React.Component<{}, {}> {
     public render() {
-        // root element must support `onContextMenu`
+        // 根元素必须支持`onContextMenu`
         return <div>{...}</div>;
     }
 
     public renderContextMenu() {
-        // return a single element, or nothing to use default browser behavior
+        // 返回一个单独的元素，或者没有使用默认的浏览器行为
         return (
             <Menu>
                 <MenuItem onClick={this.handleSave} text="Save" />
@@ -55,7 +45,7 @@ class RightClickMe extends React.Component<{}, {}> {
     }
 
     public onContextMenuClose() {
-        // Optional method called once the context menu is closed.
+        // 上下文菜单关闭后调用的可选方法。
     }
 }
 ```
@@ -63,35 +53,30 @@ class RightClickMe extends React.Component<{}, {}> {
 [ts-decorator]: https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Decorators.md
 [wiki-cm]: https://en.wikipedia.org/wiki/Context_menu
 
-@## JavaScript API: imperative
+@## JavaScript API: 命令式
 
-The `ContextMenu` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`ContextMenu`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-The imperative API provides a single static `ContextMenu` object, enforcing the principle that only
-one context menu can be open at a time.
+命令式API提供了一个静态的`ContextMenu`对象，强制一次只能打开一个上下文菜单的原则。
 
-- `ContextMenu.show(menu: JSX.Element, offset: IOffset, onClose?: () => void): void` &ndash;
-Show the given element at the given offset from the top-left corner of the viewport.
-Showing a menu closes the previously shown one automatically.
+- `ContextMenu.show(menu: JSX.Element, offset: IOffset, onClose?: () => void): void` &ndash;显示给定的元素，距离视口左上角给定的偏移量。菜单自动关闭以前显示的菜单。
 
-The menu appears below-right of this point, but will flip to below-left instead if there is not
-enough room onscreen. The optional callback is invoked when this menu closes.
+菜单出现在这一点的右下方，但是如果屏幕上没有足够的空间，将会翻到左下方。此菜单关闭时调用可选的回调。
 
-- `ContextMenu.hide(): void` &ndash; Hide the context menu, if it is open.
-- `ContextMenu.isOpen(): boolean` &ndash; Whether a context menu is currently visible.
+- `ContextMenu.hide(): void` &ndash; 隐藏上下文菜单，如果它是打开的。
+- `ContextMenu.isOpen(): boolean` &ndash; 上下文菜单当前是否可见。
 
-This API is ideal for non-React-based apps or for programmatically triggered menus.
+此API非常适合于非基于React的应用程序或以编程方式触发的菜单。
 
 ```tsx
 import { ContextMenu, MenuFactory, MenuItemFactory } from "@blueprintjs/core";
 
 const rightClickMe = document.query("#right-click-me") as HTMLElement;
 rightClickMe.oncontextmenu = (e: MouseEvent) => {
-    // prevent the browser's native context menu
+    // 阻止浏览器的原生上下文菜单
     e.preventDefault();
 
-    // render a Menu without JSX...
+    // 渲染没有JSX的菜单...
     const menu = MenuFactory({
         children: [
             MenuItemFactory({ onClick: handleSave, text: "Save" }),
@@ -99,9 +84,9 @@ rightClickMe.oncontextmenu = (e: MouseEvent) => {
         ]
     });
 
-    // mouse position is available on event
+    // 鼠标位置可用于事件
     ContextMenu.show(menu, { left: e.clientX, top: e.clientY }, () => {
-        // menu was closed; callback optional
+        // 菜单关闭; 可选的回调
     });
 };
 ```

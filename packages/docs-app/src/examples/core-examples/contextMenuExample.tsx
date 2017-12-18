@@ -78,6 +78,6 @@ export class ContextMenuExample extends BaseExample<{}> {
     }
 
     protected renderOptions() {
-        return <span>Right-click on node or background.</span>;
+        return <span>右键单击节点或背景。</span>;
     }
 }
