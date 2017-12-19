@@ -13,12 +13,12 @@ export class DialogExample extends OverlayExample {
     protected renderExample() {
         return (
             <div className="docs-dialog-example">
-                <Button onClick={this.handleOpen}>Show dialog</Button>
+                <Button onClick={this.handleOpen}>显示对话框</Button>
                 <Dialog
                     className={this.props.themeName}
                     iconName="inbox"
                     onClose={this.handleClose}
-                    title="Dialog header"
+                    title="对话框标题"
                     {...this.state}
                 >
                     <div className={Classes.DIALOG_BODY}>
@@ -38,10 +38,10 @@ export class DialogExample extends OverlayExample {
                     </div>
                     <div className={Classes.DIALOG_FOOTER}>
                         <div className={Classes.DIALOG_FOOTER_ACTIONS}>
-                            <Button>Secondary</Button>
+                            <Button>次要</Button>
                             <Tooltip content="This button is hooked up to close the dialog." inline={true}>
                                 <Button className="pt-intent-primary" onClick={this.handleClose}>
-                                    Primary
+                                    主要
                                 </Button>
                             </Tooltip>
                         </div>

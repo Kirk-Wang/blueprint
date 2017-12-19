@@ -15,17 +15,16 @@ Markup:
   <div class="pt-dialog">
     <div class="pt-dialog-header">
       <span class="pt-icon-large pt-icon-inbox"></span>
-      <h5>Dialog header</h5>
+      <h5>对话框头部</h5>
       <button aria-label="Close" class="pt-dialog-close-button pt-icon-small-cross"></button>
     </div>
     <div class="pt-dialog-body">
-      This dialog hasn't been wired up with any open or close interactions.
-      It's just an example of markup and styles.
+      这个对话框没有与任何打开或关闭的交互进行连接。这只是一个标记和样式的例子。
     </div>
     <div class="pt-dialog-footer">
       <div class="pt-dialog-footer-actions">
-        <button type="button" class="pt-button">Secondary button</button>
-        <button type="submit" class="pt-button pt-intent-primary">Primary button</button>
+        <button type="button" class="pt-button">次要按钮</button>
+        <button type="submit" class="pt-button pt-intent-primary">主要按钮</button>
       </div>
     </div>
   </div>

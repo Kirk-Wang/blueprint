@@ -17,47 +17,46 @@ import { IBackdropProps, IOverlayableProps, Overlay } from "../overlay/overlay";
 
 export interface IDialogProps extends IOverlayableProps, IBackdropProps, IProps {
     /**
-     * Toggles the visibility of the overlay and its children.
-     * This prop is required because the component is controlled.
+     * 切换叠加层及其子项的可见性。
+     * 这个属性是必须的，因为组件是受控的。
      */
     isOpen: boolean;
 
     /**
-     * Dialog always has a backdrop so this prop is excluded from the public API.
+     * 对话框总是有一个背景，所以这个属性从公共API中排除。
      * @internal
      */
     hasBackdrop?: boolean;
 
     /**
-     * Name of the icon (the part after `pt-icon-`) to appear in the dialog's header.
+     * 图标名称（`pt-icon-`之后的部分）出现在对话框的标题中。
      * Note that the header will only be rendered if `title` is provided.
      */
     iconName?: IconName;
 
     /**
-     * Whether to show the close button in the dialog's header.
-     * Note that the header will only be rendered if `title` is provided.
+     * 是否在对话框的标题中显示关闭按钮。
+     * 请注意，只有在提供了`title`的情况下才会呈现。
      * @default true
      */
     isCloseButtonShown?: boolean;
 
     /**
-     * CSS styles to apply to the dialog.
+     * 应用于对话框的CSS样式。
      * @default {}
      */
     style?: React.CSSProperties;
 
     /**
-     * Title of the dialog.
-     * If provided, a `.pt-dialog-header` element will be rendered inside the dialog
-     * before any children elements.
-     * In the next major version, this prop will be required.
+     * 对话框标题
+     * 如果提供了，一个`.pt-dialog-header`元素将会被渲染在对话框内部，在任何子元素之前。
+     * 在下一个主要版本中，这个属性将是必需的。
      */
     title?: string | JSX.Element;
 
     /**
-     * Name of the transition for internal `CSSTransitionGroup`.
-     * Providing your own name here will require defining new CSS transition properties.
+     * 内部`CSSTransitionGroup`的变换名称。
+     * 在这里提供你自己的名字将需要定义新的CSS变换属性。
      */
     transitionName?: string;
 }

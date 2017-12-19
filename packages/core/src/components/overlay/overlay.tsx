@@ -17,80 +17,71 @@ import { Portal } from "../portal/portal";
 
 export interface IOverlayableProps {
     /**
-     * Whether the overlay should acquire application focus when it first opens.
+     * 覆盖层是否应该在首次打开时获得应用程序焦点。
      * @default true
      */
     autoFocus?: boolean;
 
     /**
-     * Whether pressing the `esc` key should invoke `onClose`.
+     * 是否按下`esc`键应该调用`onClose`。
      * @default true
      */
     canEscapeKeyClose?: boolean;
 
     /**
-     * Whether the overlay should prevent focus from leaving itself. That is, if the user attempts
-     * to focus an element outside the overlay and this prop is enabled, then the overlay will
-     * immediately bring focus back to itself. If you are nesting overlay components, either disable
-     * this prop on the "outermost" overlays or mark the nested ones `inline={true}`.
+     * 覆盖层是否应该防止焦点离开本身。
+     * 也就是说，如果用户试图聚焦覆盖层之外的元素，并且此属性已被启用，则覆盖层将立即使焦点回到自身。
+     * 如果要嵌套覆盖层组件，请在“最外层”叠加层上禁用此属性或将嵌套标记为`inline={true}`。
      * @default true
      */
     enforceFocus?: boolean;
 
     /**
-     * Whether the overlay should be rendered inline or into a new element on `document.body`.
-     * This prop essentially determines which element is covered by the backdrop: if `true`,
-     * then only its parent is covered; otherwise, the entire application is covered.
-     * Set this prop to `true` when this component is used inside an `Overlay` (such as
-     * `Dialog` or `Popover`) to ensure that this component is rendered above its parent.
+     * 是否将叠加层渲染为内联或者放入`document.body`的新元素中。
+     * 这个属性基本上决定了背景覆盖哪个元素：如果是`true`，那么只有父元素被覆盖，否则覆盖整个应用程序。
+     * 在`Overlay`（如`Dialog`或`Popover`）中使用此组件时，将此属性设置为`true`，以确保此组件在父级之上呈现。
      * @default false
      */
     inline?: boolean;
 
     /**
-     * If `true` and not `inline`, the `Portal` containing the children is created and attached
-     * to the DOM when the overlay is opened for the first time; otherwise this happens when the
-     * component mounts. Lazy mounting provides noticeable performance improvements if you have lots
-     * of overlays at once, such as on each row of a table.
+     * 如果是true，并且不是`inline`，那么当覆盖层第一次被打开的时候，就会创建包含这些子级的`Portal`，并将其附加到DOM; 
+     * 否则是在组件挂载时发生这种情况。如果一次有很多overlay，比如表格的每一行，那么延迟挂载可以显着提高性能。
      * @default true
      */
     lazy?: boolean;
 
     /**
-     * Indicates how long (in milliseconds) the overlay's enter/leave transition takes.
-     * This is used by React `CSSTransitionGroup` to know when a transition completes and must match
-     * the duration of the animation in CSS. Only set this prop if you override Blueprint's default
-     * transitions with new transitions of a different length.
+     * 指示叠加层进入/离开转换需要多长时间（以毫秒为单位）。
+     * React`CSSTransitionGroup`使用它来知道一个转换何时完成，并且必须和CSS中动画的持续时间相匹配。
+     * 如果您使用不同长度的新转场覆盖Blueprint的默认转场，请设置此属性。
      * @default 100
      */
     transitionDuration?: number;
 
     /**
-     * A callback that is invoked when user interaction causes the overlay to close, such as
-     * clicking on the overlay or pressing the `esc` key (if enabled).
-     * Receives the event from the user's interaction, if there was an event (generally either a
-     * mouse or key event). Note that, since this component is controlled by the `isOpen` prop, it
-     * will not actually close itself until that prop becomes `false`.
+     * 当用户交互导致覆盖层关闭时调用的回调，例如点击覆盖层或按`esc`键（如果启用）。
+     * 如果发生事件（通常是鼠标或键盘事件），则从用户的交互中接收事件。
+     * 请注意，由于这个组件是由`isOpen`属性控制的，所以它不会真正关闭，直到这个属性变成`false`。
      */
     onClose?(event?: React.SyntheticEvent<HTMLElement>): void;
 }
 
 export interface IBackdropProps {
-    /** CSS class names to apply to backdrop element. */
+    /** 应用于背景元素CSS类名称。 */
     backdropClassName?: string;
 
-    /** HTML props for the backdrop element. */
+    /** 背景元素的HTML属性。 */
     backdropProps?: React.HTMLProps<HTMLDivElement>;
 
     /**
-     * Whether clicking outside the overlay element (either on backdrop when present or on document)
-     * should invoke `onClose`.
+     * 是否是在叠加元素之外单击（在背景上或者在文档上时）都应该调用`onClose`。
      * @default true
      */
     canOutsideClickClose?: boolean;
 
     /**
-     * Whether a container-spanning backdrop element should be rendered behind the contents.
+     * 是否应该在内容后面渲染容器生成的背景元素。
      * @default true
      */
     hasBackdrop?: boolean;

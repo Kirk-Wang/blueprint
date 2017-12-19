@@ -1,6 +1,6 @@
-@# Dialogs
+@# Dialogs 对话框
 
-Dialogs present content overlaid over other parts of the UI.
+对话框上内容覆盖UI的其他部分。
 
 <div class="pt-callout pt-intent-primary pt-icon-info-sign">
     <h5>Terminology note</h5>
@@ -15,17 +15,14 @@ Dialogs present content overlaid over other parts of the UI.
 
 @## JavaScript API
 
-The `Dialog` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Dialog`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-There are two ways to render dialogs:
+有两种方法来呈现对话框：
 
-- injected into a newly created element attached to `document.body` using `<Portal>`.
-  This is the default behavior.
-- in-place in the DOM tree. Set `inline={true}` to enable this behavior.
+- 使用`<Portal>`注入到新创建的元素中并附加到`document.body`。这是默认行为。
+- 在DOM树中就地。设置`inline={true}`来启用这个行为。
 
-`Dialog` is a stateless React component. The children you provide to this component
-are rendered as contents inside the `.pt-dialog` element.
+`Dialog`是一个无状态的React组件。您提供给这个组件的子项在`.pt-dialog`元素内部作为内容渲染。
 
 ```tsx
 interface IDialogExampleState {
@@ -71,10 +68,9 @@ class DialogExample extends React.Component<{}, IDialogExampleState> {
 
 @## CSS API
 
-You can create dialogs manually using the HTML markup and `pt-dialog-*` classes below.
-However, you should use the dialog [JavaScript APIs](#core/components/dialog.javascript-api) whenever possible,
-as they automatically generate some of this markup.
+您可以使用下面的HTML标记和`pt-dialog-*`类来手动创建对话框。但是，你应尽可能使用对话框[JavaScript APIs](#core/components/dialog.javascript-api)
+因为他们自动生成一些这种标记。
 
-More examples of dialog content are shown below.
+对话框内容的更多例子如下所示。
 
 @css pt-dialog

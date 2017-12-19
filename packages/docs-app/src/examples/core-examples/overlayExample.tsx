@@ -86,34 +86,34 @@ export class OverlayExample extends BaseExample<IOverlayExampleState> {
                 <Switch
                     checked={this.state.autoFocus}
                     key="autoFocus"
-                    label="Auto focus"
+                    label="自动聚焦"
                     onChange={this.handleAutoFocusChange}
                 />,
                 <Switch
                     checked={this.state.enforceFocus}
                     key="enforceFocus"
-                    label="Enforce focus"
+                    label="强制聚焦"
                     onChange={this.handleEnforceFocusChange}
                 />,
-                <Switch checked={inline} key="inline" label="Render inline" onChange={this.handleInlineChange} />,
+                <Switch checked={inline} key="inline" label="内联渲染" onChange={this.handleInlineChange} />,
             ],
             [
                 <Switch
                     checked={this.state.canOutsideClickClose}
                     key="click"
-                    label="Click outside to close"
+                    label="单击外部关闭"
                     onChange={this.handleOutsideClickChange}
                 />,
                 <Switch
                     checked={this.state.canEscapeKeyClose}
                     key="escape"
-                    label="Escape key to close"
+                    label="按Esc键关闭"
                     onChange={this.handleEscapeKeyChange}
                 />,
                 <Switch
                     checked={hasBackdrop}
                     key="backdrop"
-                    label="Has backdrop"
+                    label="有背景"
                     onChange={this.handleBackdropChange}
                 />,
             ],
