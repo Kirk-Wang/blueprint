@@ -81,13 +81,13 @@ export class EditableTextExample extends BaseExample<IEditableTextExampleState> 
             [
                 <Switch
                     checked={this.state.selectAllOnFocus}
-                    label="Select all on focus"
+                    label="获得焦点并选中所有"
                     key="focus"
                     onChange={this.toggleSelectAll}
                 />,
                 <Switch
                     checked={this.state.confirmOnEnterKey}
-                    label="Swap keypress for confirm and newline (multiline only)"
+                    label="交换确认和换行按键（仅限multiline）"
                     key="swap"
                     onChange={this.toggleSwap}
                 />,

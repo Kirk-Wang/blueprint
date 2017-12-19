@@ -17,75 +17,74 @@ import { Browser } from "../../compatibility";
 
 export interface IEditableTextProps extends IIntentProps, IProps {
     /**
-     * If `true` and in multiline mode, the `enter` key will trigger onConfirm and `mod+enter`
-     * will insert a newline. If `false`, the key bindings are inverted such that `enter`
-     * adds a newline.
+     * 如果是`true`，在多行模式下，`enter`键将触发onConfirm，而`mod+enter`将插入换行符。
+     * 如果`false`，则键绑定被反转，使得`enter`添加换行符。
      * @default false
      */
     confirmOnEnterKey?: boolean;
 
-    /** Default text value of uncontrolled input. */
+    /** 非受控输入的默认文本值。 */
     defaultValue?: string;
 
     /**
-     * Whether the text can be edited.
+     * 文本是否可以编辑。
      * @default false
      */
     disabled?: boolean;
 
-    /** Whether the component is currently being edited. */
+    /** 组件是否正在编辑。 */
     isEditing?: boolean;
 
-    /** Maximum number of characters allowed. Unlimited by default. */
+    /** 允许的最大字符数。 无默认限制。 */
     maxLength?: number;
 
-    /** Minimum width in pixels of the input, when not `multiline`. */
+    /** 输入的最小宽度（以像素为单位），当不是`multiline`时。 */
     minWidth?: number;
 
     /**
-     * Whether the component supports multiple lines of text.
-     * This prop should not be changed during the component's lifetime.
+     * 组件是否支持多行文本。
+     * 这个属性不应该在组件的生命周期中改变。
      * @default false
      */
     multiline?: boolean;
 
     /**
-     * Maximum number of lines before scrolling begins, when `multiline`.
+     * `multiline`时，滚动开始前的最大行数。
      */
     maxLines?: number;
 
     /**
-     * Minimum number of lines (essentially minimum height), when `multiline`.
+     * `multiline`时的最小行数（基本上是最小高度）。
      * @default 1
      */
     minLines?: number;
 
     /**
-     * Placeholder text when there is no value.
+     * 没有值的占位符文本。
      * @default "Click to Edit"
      */
     placeholder?: string;
 
     /**
-     * Whether the entire text field should be selected on focus.
-     * If `false`, the cursor is placed at the end of the text.
+     * 是否应该聚焦选中整个文本字段。
+     * 如果`false`，则光标位于文本的末尾。
      * @default false
      */
     selectAllOnFocus?: boolean;
 
-    /** Text value of controlled input. */
+    /** 受控输入的文本值。 */
     value?: string;
 
-    /** Callback invoked when user cancels input with the `esc` key. Receives last confirmed value. */
+    /** 用户使用`esc`键取消输入时调用的回调函数。接收最后确认的值。 */
     onCancel?(value: string): void;
 
-    /** Callback invoked when user changes input in any way. */
+    /** 当用户以所有方式改变输入时调用的回调。 */
     onChange?(value: string): void;
 
-    /** Callback invoked when user confirms value with `enter` key or by blurring input. */
+    /** 当用户通过`enter`键或通过失去焦点输入确认值时调用的回调。 */
     onConfirm?(value: string): void;
 
-    /** Callback invoked after the user enters edit mode. */
+    /** 在用户进入编辑模式之后调用的回调。 */
     onEdit?(): void;
 }
 
