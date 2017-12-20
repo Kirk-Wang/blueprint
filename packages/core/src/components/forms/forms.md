@@ -1,13 +1,10 @@
-@# Form controls
+@# Form controls 表单控件
 
-The following controls often appear inside HTML forms. Blueprint does not strictly require the use
-of any `<form>` elements, so you can use these controls anywhere in the UI.
+以下控件经常出现在HTML表单中。Blueprint并不严格要求使用`<form>`元素，所以你可以在UI中的任何地方使用这些控件。
 
-Many of the components in this section provide React components for simpler idiomatic usage. These
-React components try to transparently mirror the underlying HTML element, so they support the full
-range of appropriate HTML props. If you provide a `className` prop, the class names you provide will
-be added to the default Blueprint class name. If you specify other attributes that the component
-provides, you'll overide the default value.
+本节中的许多React组件提供了更简单的惯用用法。这些React组件试图透明地反映底层的HTML元素，因此它们完整支持各种HTML属性。
+如果您提供`className`属性，则您提供的类名称将被添加到默认的Blueprint类名称中。
+如果指定组件提供的其他属性，则将覆盖默认值。
 
 @page label
 @page form-group

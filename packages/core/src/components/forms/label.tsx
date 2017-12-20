@@ -12,15 +12,15 @@ import { IProps } from "../../common/props";
 
 export interface ILabelProps extends React.AllHTMLAttributes<HTMLDivElement>, IProps {
     /**
-     * Whether the label is non-interactive.
-     * Be sure to explicitly disable any child controls as well.
+     * 标签是否是非交互式的。
+     * 确保显式禁用任何子控件。
      */
     disabled?: boolean;
 
-    /** The helper text to show next to the label. */
+    /** 显示在标签旁边的帮助文本。 */
     helperText?: React.ReactNode;
 
-    /** The text to show in the label. */
+    /** 要在标签中显示的文字。 */
     text: React.ReactNode;
 }
 

@@ -1,20 +1,16 @@
-@# Form groups
+@# Form groups|表单组
 
-Form groups support more complex form controls than [simple labels](#core/components/forms/label.simple-labels),
-such as [control groups](#core/components/forms/control-group) or [`NumericInput`](#core/components/forms/numeric-input).
-They also support additional helper text to aid with user navigation.
+表单组支持比[简单标签](#core/components/forms/label.simple-labels)更复杂的表单控件，例如[控件组](#core/components/forms/control-group)或[`NumericInput`](#core/components/forms/numeric-input)。 他们还支持更多的帮助文本，以帮助用户导航。
 
 @## CSS API
 
-- Link each label to its respective control element with a `for={#id}` attribute on the `<label>` and
-`id={#id}` on the control.
+- 使用`<label>`上的`for={#id}`属性和控件上的`id={#id}`将每个标签链接到其各自的控件元素。
 
-- Add `.pt-intent-*` or `.pt-disabled` to `.pt-form-group` to style the label and helper text.
-Similar to labels, nested controls need to be styled separately.
+- 将`.pt-intent-*`或`.pt-disabled`添加到`.pt-form-group`中以样式化标签和帮助文本。与标签类似，嵌套控件需要单独设置样式。
 
-- Add `.pt-inline` to `.pt-form-group` to place the label to the left of the control.
+- 添加`.pt-inline`到`.pt-form-group`以便标签放置在控件的左侧。
 
-- Add `.pt-large` to `.pt-form-group` to align the label when used with large inline Blueprint controls.
+- 将`.pt-large`添加到`.pt-form-group`，以便在与大型内联Blueprint控件一起使用时对齐标签。
 
 @css pt-form-group
 

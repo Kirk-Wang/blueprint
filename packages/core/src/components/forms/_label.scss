@@ -8,16 +8,16 @@ Labels
 
 Markup:
 <label class="pt-label {{.modifier}}">
-  Label A
+  标签A
   <span class="pt-text-muted">(required)</span>
-  <input class="pt-input" style="width: 200px;" type="text" placeholder="Text input" dir="auto" />
+  <input class="pt-input" style="width: 200px;" type="text" placeholder="文本输入框" dir="auto" />
 </label>
 <label class="pt-label {{.modifier}}">
-  Label B
+  标签B
   <span class="pt-text-muted">(optional)</span>
   <div class="pt-input-group">
     <span class="pt-icon pt-icon-calendar"></span>
-    <input class="pt-input" style="width: 200px;" type="text" placeholder="Input group" dir="auto" />
+    <input class="pt-input" style="width: 200px;" type="text" placeholder="输入框组" dir="auto" />
   </div>
 </label>
 
@@ -69,22 +69,22 @@ label.pt-label {
 
   Markup:
   <label class="pt-label pt-disabled">
-    Label A
+    标签A
     <span class="pt-text-muted">(optional)</span>
-    <input disabled class="pt-input" style="width: 200px;" type="text" placeholder="Text input" dir="auto" />
+    <input disabled class="pt-input" style="width: 200px;" type="text" placeholder="文本输入框" dir="auto" />
   </label>
   <label class="pt-label pt-disabled">
-    Label B
+    标签B
     <div class="pt-input-group pt-disabled">
       <span class="pt-icon pt-icon-calendar"></span>
-      <input disabled class="pt-input" style="width: 200px;" type="text" placeholder="Input group" dir="auto" />
+      <input disabled class="pt-input" style="width: 200px;" type="text" placeholder="输入框组" dir="auto" />
     </div>
   </label>
   <label class="pt-label pt-disabled">
-    Label C
+    标签C
     <div class="pt-select pt-disabled">
       <select disabled>
-        <option selected>Choose an item...</option>
+        <option selected>选择一个项目...</option>
         <option value="1">One</option>
       </select>
     </div>
