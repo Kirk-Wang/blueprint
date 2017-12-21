@@ -1,7 +1,6 @@
-@# Switches
+@# Switches|开关
 
-A switch is simply an alternate appearance for a [checkbox](#core/components/forms/checkbox) that
-simulates on/off instead of checked/unchecked.
+一个switch只是一个[复选框](#core/components/forms/checkbox)的替代外观，它模拟开/关而不是选中/未选中。
 
 @reactExample SwitchExample
 
@@ -11,14 +10,12 @@ simulates on/off instead of checked/unchecked.
 
 @## JavaScript API
 
-The `Switch` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Switch`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
 ```tsx
 <Switch checked={this.state.isPublic} label="Public" onChange={this.handlePublicChange} />
 ```
 
-Note that this component supports the full range of props available on HTML `input` elements.
-The most common options are detailed below.
+请注意，此组件支持HTML`input`元素上可用的全部属性。最常用的选项在下面详细介绍。
 
 @interface ISwitchProps

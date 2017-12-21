@@ -13,12 +13,12 @@ export class SwitchExample extends BaseExample<{}> {
     protected renderExample() {
         return (
             <div>
-                <label className={Classes.LABEL}>Privacy setting</label>
-                <Switch labelElement={<strong>Enabled</strong>} />
-                <Switch labelElement={<em>Public</em>} />
-                <Switch labelElement={<u>Cooperative</u>} defaultChecked={true} />
+                <label className={Classes.LABEL}>隐私设置</label>
+                <Switch labelElement={<strong>启用</strong>} />
+                <Switch labelElement={<em>公开</em>} />
+                <Switch labelElement={<u>协同</u>} defaultChecked={true} />
                 <small>
-                    This example uses <code>labelElement</code> to demonstrate JSX labels.
+                    这个例子使用<code>labelElement</code>来演示JSX标签。
                 </small>
             </div>
         );

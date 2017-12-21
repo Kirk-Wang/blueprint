@@ -1,12 +1,8 @@
-@# Checkboxes
+@# Checkboxes|复选框
 
-Blueprint's custom checkboxes use an extra `.pt-control-indicator` element after the `<input>` to
-achieve their custom styling. You should then wrap the whole thing in a `<label>` with the classes
-`.pt-control.pt-checkbox`.
+Blueprint使用额外的`.pt-control-indicator`元素自定义复选框，在`<input>`之后来实现自定义样式。然后你应该把所有的东西都包装在一个带有`.pt-control.pt-checkbox`类的`<label>`中。
 
-Note that attribute modifiers (`:checked`, `:disabled`) are applied on the internal `<input>`
-element. Further note that `:indeterminate` can only be set via JavaScript (the `Checkbox` React
-component supports it handily with a prop).
+请注意，属性修饰符（`:checked`，`:disabled`）应用于内部`<input>`元件。进一步注意`:indeterminate`只能通过JavaScript设置（`Checkbox` React组件支持它处理一个属性）。
 
 @reactExample CheckboxExample
 
@@ -16,33 +12,27 @@ component supports it handily with a prop).
 
 @## JavaScript API
 
-The `Checkbox` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`Checkbox`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
 ```tsx
-// simple usage for string labels
+// 字符串标签的简单用法
 <Checkbox checked={this.state.isEnabled} label="Enabled" onChange={this.handleEnabledChange} />
 
-// advanced usage for JSX content
+// JSX内容的高级用法
 <Checkbox checked={this.state.isEnabled} onChange={this.handleEnabledChange}>
 <span className="pt-icon-standard pt-icon-user" />
 Gilad Gray
 </Checkbox>
 ```
 
-Note that this component supports the full range of props available on HTML `input` elements.
-Use `checked` instead of `value` in controlled mode to avoid typings issues.
-The most common options are detailed below.
+请注意，此组件支持HTML`input`元素上可用的全部属性。在受控模式下使用`checked`而不是`value`来避免类型问题。最常见的选项详述如下。
 
 @interface ICheckboxProps
 
-@## Inline controls
+@## Inline controls|内联控件
 
-Checkboxes, radios, and switches all support the `.pt-inline` modifier to make them `display:
-inline-block`. Note that this modifier functions slightly differently on these elements than it
-does on `.pt-label`. On `.pt-label`, it only adjusts the layout of text _within_ the label and not
-the display of the label itself.
+Checkbox，radio和switch都支持`.pt-inline`修饰符来使它们成为`display:inline-block`。请注意，这个修饰符在这些元素上的功能略微不同于`.pt-label`。在`.pt-label`上，它只调整标签内文本的布局，而不是标签本身的显示。
 
-Here's an example of how you might group together some controls and label them.
+以下是一个如何将一些控件分组在一起并对其进行标记的例子。
 
 @css pt-checkbox.pt-inline

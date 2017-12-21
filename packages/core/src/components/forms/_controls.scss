@@ -128,12 +128,12 @@ $control-checked-background-color-active: nth(map-get($button-intents, "primary"
     Checkbox
   </label>
 
-  :checked  - Checked
-  :disabled - Disabled. Also add <code>.pt-disabled</code> to <code>.pt-control</code> to change text color (not shown below).
-  :indeterminate - Indeterminate. Note that this style can only be achieved via JavaScript
+  :checked  - 勾选
+  :disabled - 禁用。还要将<code>.pt-disabled</code>添加到<code>.pt-control</code>以更改文本颜色（以下未显示）。
+  :indeterminate - Indeterminate. 请注意，这种风格只能通过JavaScript来实现
                    <code>input.indeterminate = true</code>.
-  .pt-align-right - Right-aligned indicator
-  .pt-large - Large
+  .pt-align-right - 右对齐的指标
+  .pt-large - 大的
 
   Styleguide pt-checkbox
   */
@@ -170,10 +170,10 @@ $control-checked-background-color-active: nth(map-get($button-intents, "primary"
     Radio
   </label>
 
-  :checked  - Selected
-  :disabled - Disabled. Also add <code>.pt-disabled</code> to <code>.pt-control</code> to change text color (not shown below).
-  .pt-align-right - Right-aligned indicator
-  .pt-large - Large
+  :checked  - 选中
+  :disabled - 禁用。还要将<code>.pt-disabled</code>添加到<code>.pt-control</code>以更改文本颜色（以下未显示）。
+  .pt-align-right - 右对齐指标
+  .pt-large - 大的
 
   Styleguide pt-radio
   */
@@ -220,10 +220,10 @@ $control-checked-background-color-active: nth(map-get($button-intents, "primary"
     Switch
   </label>
 
-  :checked  - Selected
-  :disabled - Disabled. Also add <code>.pt-disabled</code> to <code>.pt-control</code> to change text color (not shown below).
-  .pt-align-right - Right-aligned indicator
-  .pt-large - Large
+  :checked  - 选中
+  :disabled - 禁用。还要将<code>.pt-disabled</code>添加到<code>.pt-control</code>以更改文本颜色（以下未显示）。
+  .pt-align-right - 右对齐指标
+  .pt-large - 大的
 
   Styleguide pt-switch
   */
@@ -531,21 +531,21 @@ $control-checked-background-color-active: nth(map-get($button-intents, "primary"
   Inline labels
 
   Markup:
-  <label class="pt-label">A group of related options</label>
+  <label class="pt-label">一组相关的选项</label>
   <label class="pt-control pt-checkbox pt-inline">
     <input type="checkbox" />
     <span class="pt-control-indicator"></span>
-    First
+    第一
   </label>
   <label class="pt-control pt-checkbox pt-inline">
     <input type="checkbox" />
     <span class="pt-control-indicator"></span>
-    Second
+    第二
   </label>
   <label class="pt-control pt-checkbox pt-inline">
     <input type="checkbox" />
     <span class="pt-control-indicator"></span>
-    Third
+    第三
   </label>
 
   Styleguide pt-checkbox.pt-inline

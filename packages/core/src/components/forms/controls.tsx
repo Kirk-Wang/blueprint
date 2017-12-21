@@ -21,38 +21,38 @@ import { HTMLInputProps } from "../../index";
 export interface IControlProps extends IProps, HTMLInputProps {
     // NOTE: HTML props are duplicated here to provide control-specific documentation
 
-    /** Whether the control is checked. */
+    /** 是否勾选控件。 */
     checked?: boolean;
 
-    /** Whether the control is initially checked (uncontrolled mode). */
+    /** 控制是否被初始勾选（非控模式）。 */
     defaultChecked?: boolean;
 
-    /** Whether the control is non-interactive. */
+    /** 控制是否是非交互式的。 */
     disabled?: boolean;
 
-    /** Ref handler that receives HTML `<input>` element backing this component. */
+    /** 引用处理器，它接收此组件背后的HTML`<input>`元素。 */
     inputRef?: (ref: HTMLInputElement) => any;
 
-    /** Whether the control is inline. */
+    /** 控件是否内联。 */
     inline?: boolean;
 
     /**
-     * Text label for the control.
+     * 控件的文本标签。
      *
-     * This prop actually supports JSX elements, but TypeScript will throw an error because
-     * `HTMLProps` only allows strings. Use `labelElement` to supply a JSX element in TypeScript.
+     * 这个属性实际上支持JSX元素，但是TypeScript会抛出一个错误，因为`HTMLProps`只允许字符串。
+     * 使用`labelElement`在TypeScript中提供一个JSX元素。
      */
     label?: string;
 
     /**
-     * JSX Element label for the control.
+     * 控件的JSX元素标签。
      *
-     * This prop is necessary for TypeScript consumers as the type definition for `label` only
-     * accepts strings. JavaScript consumers can provide a JSX element directly to `label`.
+     * 这个属性对于TypeScript使用者是必须的，因为`label`的类型定义只接受字符串。 
+     * JavaScript使用者可以直接将JSX元素提供给`label`。
      */
     labelElement?: React.ReactNode;
 
-    /** Event handler invoked when input value is changed. */
+    /** 在输入值更改时被调用事件处理程序。 */
     onChange?: React.FormEventHandler<HTMLInputElement>;
 }
 
@@ -92,13 +92,12 @@ export class Control<P extends IControlProps> extends React.Component<P, {}> {
 }
 
 export interface ICheckboxProps extends IControlProps {
-    /** Whether this checkbox is initially indeterminate (uncontrolled mode). */
+    /** 这个复选框是否最初是不确定的（非控模式）。 */
     defaultIndeterminate?: boolean;
 
     /**
-     * Whether this checkbox is indeterminate, or "partially checked."
-     * The checkbox will appear with a small dash instead of a tick to indicate that the value
-     * is not exactly true or false.
+     * 这个复选框是不确定的，还是“部分勾选”。
+     * 该复选框将显示一个小破折号，而不是一个打勾，表示该值不完全是真或假。
      */
     indeterminate?: boolean;
 }
