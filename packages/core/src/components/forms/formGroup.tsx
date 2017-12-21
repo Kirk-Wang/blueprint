@@ -12,33 +12,31 @@ import { IIntentProps, IProps } from "../../common/props";
 
 export interface IFormGroupProps extends IIntentProps, IProps {
     /**
-     * Whether form group should appear as non-interactive.
-     * Remember that `input` elements must be disabled separately.
+     * 表单组是否应该显示为非交互式。
+     * 记住`input`元素必须单独禁用。
      */
     disabled?: boolean;
 
-    /** Optional helper text. The given content will be wrapped in `.pt-form-helper-text` and displayed beneath `children`. */
+    /** 可选的帮助文本。给定的内容将被封装在`.pt-form-helper-text`中，并显示在`children`下面。 */
     helperText?: React.ReactNode;
 
-    /** Whether to render the label and children on a single line. */
+    /** 是否在一行上渲染标签和子项。 */
     inline?: boolean;
 
-    /** Label of this form group. */
+    /** 这个表单组的标签。 */
     label?: React.ReactNode;
 
     /**
-     * `id` attribute of the labelable form element that this `FormGroup` controls,
-     * used as `<label for>` attribute.
+     * `FormGroup`控制的可标识表单元素的`id`属性，用作`<label for>`属性。
      */
     labelFor?: string;
 
     /**
-     * Whether this form input should appear as required (does not affect HTML form required status).
-     * Providing a boolean `true` value will render a default "required" message after the `label` prop.
-     * Providing a JSX value will render that content instead.
+     * 该表单输入是否应该显示必须（不影响HTML表单所需状态）。
+     * 提供一个布尔值`true`的值将会在`label`属性之后产生一个默认的"required"消息。
+     * 提供JSX值将会渲染该内容，而不是默认的"required"消息。
      *
-     * _Note:_ the default message element is exposed as `FormGroup.DEFAULT_REQUIRED_CONTENT` and
-     * can be changed to provide a new global default for your app.
+     * _注意：_默认的消息元素被暴露为FormGroup.DEFAULT_REQUIRED_CONTENT，并且可以被更改为你app提供的一个新的全局默认值。
      * @default false
      */
     requiredLabel?: boolean | React.ReactNode;

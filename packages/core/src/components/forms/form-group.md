@@ -16,10 +16,9 @@
 
 @## JavaScript API
 
-The `FormGroup` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`FormGroup`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-This component is a simple wrapper around the CSS API that abstracts away the HTML complexity.
+这个组件是CSS API的一个简单包装器，可以抽象出HTML的复杂性。
 
 ```tsx
 <FormGroup

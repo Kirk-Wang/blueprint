@@ -10,91 +10,91 @@ Form groups
 Markup:
 <div class="pt-form-group">
   <label class="pt-label" for="example-form-group-input-a">
-    Label A
-    <span class="pt-text-muted">(required)</span>
+    标签A
+    <span class="pt-text-muted">（必需的）</span>
   </label>
   <div class="pt-form-content">
-    <input id="example-form-group-input-a" class="pt-input" style="width: 300px;" placeholder="Placeholder text" type="text" dir="auto" />
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <input id="example-form-group-input-a" class="pt-input" style="width: 300px;" placeholder="占位符文本" type="text" dir="auto" />
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 <div class="pt-form-group pt-intent-danger">
   <label class="pt-label" for="example-form-group-input-b">
-    Label B
-    <span class="pt-text-muted">(required)</span>
+    标签B
+    <span class="pt-text-muted">（必需的）</span>
   </label>
   <div class="pt-form-content">
     <div class="pt-input-group pt-intent-danger">
       <span class="pt-icon pt-icon-calendar"></span>
-      <input id="example-form-group-input-b" class="pt-input" style="width: 200px;" type="text" placeholder="Placeholder text" dir="auto" />
+      <input id="example-form-group-input-b" class="pt-input" style="width: 200px;" type="text" placeholder="占位符文本" dir="auto" />
     </div>
-    <div class="pt-form-helper-text">Please enter a value</div>
+    <div class="pt-form-helper-text">请输入一个值</div>
   </div>
 </div>
 <div class="pt-form-group">
   <label class="pt-label" for="example-form-group-switch-c">
-    Label C
-    <span class="pt-text-muted">(required)</span>
+    标签C
+    <span class="pt-text-muted">（必需的）</span>
   </label>
   <div class="pt-form-content">
     <label class="pt-control pt-switch">
       <input id="example-form-group-switch-c" type="checkbox" />
       <span class="pt-control-indicator"></span>
-      Switch C
+      开关C
     </label>
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 <div class="pt-form-group pt-inline">
   <label class="pt-label" for="example-form-group-input-d">
-    Label D
+    标签D
     <span class="pt-text-muted">(optional)</span>
   </label>
   <div class="pt-form-content">
     <div class="pt-input-group">
       <span class="pt-icon pt-icon-calendar"></span>
-      <input id="example-form-group-input-d" class="pt-input" style="width: 200px;" type="text" placeholder="Placeholder text" dir="auto" />
+      <input id="example-form-group-input-d" class="pt-input" style="width: 200px;" type="text" placeholder="占位符文本" dir="auto" />
     </div>
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 <div class="pt-form-group pt-inline pt-large pt-disabled">
   <label class="pt-label" for="example-form-group-input-e">
-    Label E
+    标签E
     <span class="pt-text-muted">(optional)</span>
   </label>
   <div class="pt-form-content">
     <div class="pt-input-group pt-large pt-disabled">
       <span class="pt-icon pt-icon-calendar"></span>
-      <input id="example-form-group-input-e" class="pt-input" disabled style="width: 200px;" type="text" placeholder="Placeholder text" dir="auto" />
+      <input id="example-form-group-input-e" class="pt-input" disabled style="width: 200px;" type="text" placeholder="占位符文本" dir="auto" />
     </div>
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 <div class="pt-form-group pt-inline">
   <label class="pt-label" for="example-form-group-switch-f">
-    Label F
+    标签F
   </label>
   <div class="pt-form-content">
     <label class="pt-control pt-switch">
       <input id="example-form-group-switch-f" type="checkbox" />
       <span class="pt-control-indicator"></span>
-      Switch F
+      开关F
     </label>
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 <div class="pt-form-group pt-inline pt-large pt-disabled">
   <label class="pt-label" for="example-form-group-switch-g">
-    Label G
+    标签G
   </label>
   <div class="pt-form-content">
     <label class="pt-control pt-switch pt-large pt-disabled">
       <input id="example-form-group-switch-g" type="checkbox" disabled />
       <span class="pt-control-indicator"></span>
-      Switch G
+      开关G
     </label>
-    <div class="pt-form-helper-text">Helper text with details / user feedback</div>
+    <div class="pt-form-helper-text">帮助文本与细节/用户反馈</div>
   </div>
 </div>
 
