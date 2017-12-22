@@ -1,11 +1,8 @@
-@# Radios
+@# Radios|单选按钮
 
-Blueprint's custom radio buttons use an extra `.pt-control-indicator` element after the `<input>`
-to achieve their custom styling. You should then wrap the whole thing in a `<label>` with the
-classes `.pt-control.pt-radio`.
+Blueprint的自定义单选按钮在`<input>`之后使用额外的`.pt-control-indicator`元素来实现自定义样式。 然后你应该把所有的东西都包装在一个带有类`.pt-control.pt-radio`的`<label>`中。
 
-Note that attribute modifiers (`:checked`, `:disabled`) are applied on the internal `<input>`
-element.
+请注意，属性修饰符（`:checked`, `:disabled`）应用于内部`<input>`元素。
 
 @reactExample RadioExample
 
@@ -15,12 +12,11 @@ element.
 
 @## JavaScript API
 
-The `Radio` and `RadioGroup` components are available in the __@blueprintjs/core__ package. Make
-sure to review the [general usage docs for JS components](#blueprint.usage).
+`Radio`和`RadioGroup`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-Typically, radio buttons are used in a group to choose one option from several, similar to how a
-`<select>` tag contains several `<option>` tags. As such, you can use the `RadioGroup` component
-with a series of `Radio` children. `RadioGroup` is responsible for managing state and interaction.
+通常，组中使用单选按钮来从几个选项中选择一个选项，类似于`<select>`标签包含多个`<option>`标签的方式。
+因此，您可以使用`RadioGroup`组件和一系列`Radio`子节点。`RadioGroup`负责管理状态和交互。
+
 
 ```tsx
 <RadioGroup
@@ -34,12 +30,11 @@ with a series of `Radio` children. `RadioGroup` is responsible for managing stat
 </RadioGroup>
 ```
 
-Note that this component supports the full range of props available on HTML `input` elements.
-The most common options are detailed below.
+请注意，此组件支持HTML`input`元素上可用的全部属性。最常用的选项在下面详细介绍。
 
 @interface IRadioProps
 
-@### RadioGroup
+@### RadioGroup|单选按钮组
 
 @interface IRadioGroupProps
 

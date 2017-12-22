@@ -64,17 +64,17 @@ export interface IControlledProps {
 }
 
 /**
- * An interface for an option in a list, such as in a `<select>` or `RadioGroup`.
- * These props can be spread directly to an `<option>` or `<Radio>` element.
+ * 列表中选项的接口， 例如在`<select>`或`RadioGroup`中。
+ * 这些属性可以直接传播到一个`<option>`或`<Radio>`元素。
  */
 export interface IOptionProps extends IProps {
-    /** Whether this option is non-interactive. */
+    /** 这个选项是否是非交互式的。 */
     disabled?: boolean;
 
-    /** Label text for this option. */
+    /** 此选项标签文本。 */
     label: string;
 
-    /** Value of this option. */
+    /** 这个选项的值。 */
     value: string;
 }
 

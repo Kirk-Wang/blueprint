@@ -21,14 +21,14 @@ export class RadioExample extends BaseExample<IRadioExampleState> {
     protected renderExample() {
         return (
             <RadioGroup
-                label="Determine lunch"
+                label="确定午餐"
                 name="group"
                 onChange={this.handleRadioChange}
                 selectedValue={this.state.radioValue}
             >
-                <Radio label="Soup" value="one" />
-                <Radio label="Salad" value="two" />
-                <Radio label="Sandwich" value="three" />
+                <Radio label="汤" value="one" />
+                <Radio label="沙拉" value="two" />
+                <Radio label="三明治" value="three" />
             </RadioGroup>
         );
     }

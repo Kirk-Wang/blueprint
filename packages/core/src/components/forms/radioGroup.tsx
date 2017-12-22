@@ -14,40 +14,39 @@ import { Radio } from "./controls";
 
 export interface IRadioGroupProps extends IProps {
     /**
-     * Whether the group and _all_ its radios are disabled.
-     * Individual radios can be disabled using their `disabled` prop.
+     * 该组和其_所有_单选按钮是否被禁用。
+     * 个别单选按钮可以使用他们的`disabled`属性来禁用。
      */
     disabled?: boolean;
 
     /**
-     * Whether the radio buttons are to be displayed inline horizontally.
+     * 是否单选按钮要被内联水平显示。
      */
     inline?: boolean;
 
-    /** Optional label text to display above the radio buttons. */
+    /** 可选标签文本显示在单选按钮上方。 */
     label?: string;
 
     /**
-     * Name of the group, used to link radio buttons together in HTML.
-     * If omitted, a unique name will be generated internally.
+     * 该组的名称，用于将单选按钮链接在HTML中。
+     * 如果省略，则会在内部生成唯一的名称。
      */
     name?: string;
 
     /**
-     * Callback invoked when the currently selected radio changes.
-     * Use `event.currentTarget.value` to read the currently selected value.
-     * This prop is required because this component only supports controlled usage.
+     * 当前选择的单选按钮改变时调用的回调。
+     * 使用`event.currentTarget.value`读取当前选择的值。
+     * 这个属性是必需的，因为这个组件只支持受控使用。
      */
     onChange: (event: React.FormEvent<HTMLInputElement>) => void;
 
     /**
-     * Array of options to render in the group.
-     * This prop is mutually exclusive with `children`: either provide an array of `IOptionProps`
-     * objects or provide `<Radio>` children elements.
+     * 在组中显示的选项数组。
+     * 这个属性与`children`是互斥的：提供一个`IOptionProps`对象的数组或提供`<Radio>`子元素。
      */
     options?: IOptionProps[];
 
-    /** Value of the selected radio. The child with this value will be `:checked`. */
+    /** 选择的单选按钮值。这个值的child将被`:checked`。*/
     selectedValue?: string;
 }
 
