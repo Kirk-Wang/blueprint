@@ -10,12 +10,12 @@ File input
 Markup:
 <label class="pt-file-input {{.modifier}}">
   <input type="file" {{:modifier}}/>
-  <span class="pt-file-upload-input">Choose file...</span>
+  <span class="pt-file-upload-input">选择文件...</span>
 </label>
 
-:disabled - Disabled
-.pt-large - Larger size
-.pt-fill - Take up full width of parent element
+:disabled - 禁用
+.pt-large - 更大的尺寸
+.pt-fill - 占用父元素的全部宽度
 
 Styleguide pt-file-input
 */

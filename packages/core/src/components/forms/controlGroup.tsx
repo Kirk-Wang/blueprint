@@ -12,12 +12,12 @@ import { IProps } from "../../common/props";
 
 export interface IControlGroupProps extends React.AllHTMLAttributes<HTMLDivElement>, IProps {
     /**
-     * Whether the control group should take up the full width of its container.
+     * 控件组是否应占用其容器的整个宽度。
      */
     fill?: boolean;
 
     /**
-     * Whether the button group should appear with vertical styling.
+     * 按钮组是否应该以垂直样式显示。
      */
     vertical?: boolean;
 }

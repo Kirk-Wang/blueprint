@@ -31,8 +31,8 @@ export class ControlGroupExample extends BaseExample<IControlGroupExampleState> 
 
         return (
             <ControlGroup style={style} {...this.state}>
-                <Button iconName="filter">Filter</Button>
-                <InputGroup placeholder="Find filters..." />
+                <Button iconName="filter">过滤</Button>
+                <InputGroup placeholder="过滤条件..." />
             </ControlGroup>
         );
     }
@@ -40,8 +40,8 @@ export class ControlGroupExample extends BaseExample<IControlGroupExampleState> 
     protected renderOptions() {
         return [
             [
-                <Switch checked={this.state.fill} key="fill" label="Fill" onChange={this.toggleFill} />,
-                <Switch checked={this.state.vertical} key="vertical" label="Vertical" onChange={this.toggleVertical} />,
+                <Switch checked={this.state.fill} key="fill" label="填充" onChange={this.toggleFill} />,
+                <Switch checked={this.state.vertical} key="vertical" label="垂直" onChange={this.toggleVertical} />,
             ],
         ];
     }

@@ -1,12 +1,10 @@
-@# File input
+@# File input|文件上传
 
-Use the standard `input type="file"` along with a `span` with class `pt-file-upload-input`.
-Wrap that all in a `label` with class `pt-file-input`.
+使用标准的`input type="file"`和具有`pt-file-upload-input`类的`span`，包裹他们在一个具有`pt-file-input`类的`label`中。
 
 <div class="pt-callout pt-intent-warning pt-icon-warning-sign">
-    <h5>Static file name</h5>
-    File name does not update on file selection. To get this behavior,
-    you must implement it separately in JS.
+    <h5>静态文件名称</h5>
+    文件名不会更新文件选择。为了得到这个行为，你必须在JS中另外实现它。
 </div>
 
 @## CSS API
@@ -15,12 +13,12 @@ Wrap that all in a `label` with class `pt-file-input`.
 
 @## JavaScript API
 
-The `FileInput` component is available in the __@blueprintjs/core__ package. Make sure to review the [general usage docs for JS components](#blueprint.usage).
+`FileInput`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
-This component is a simple wrapper around the corresponding CSS API. It supports the full range of HTML props.
+这个组件是围绕相应CSS API的简单包装器。它支持全部的HTML属性。
 
 ```tsx
-<FileInput disabled={true} text="Choose file..." onInputChange={...} />
+<FileInput disabled={true} text="选择文件..." onInputChange={...} />
 ```
 
 @interface IFileInputProps

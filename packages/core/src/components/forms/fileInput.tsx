@@ -13,43 +13,40 @@ import { IProps } from "../../common/props";
 
 export interface IFileInputProps extends React.AllHTMLAttributes<HTMLLabelElement>, IProps {
     /**
-     * Whether the file input is non-interactive.
-     * Setting this to `true` will automatically disable the child input too.
+     * 文件输入是否是非交互式的。
+     * 将其设置为`true`将自动禁用子级输入。
      */
     disabled?: boolean;
 
     /**
-     * Whether the file input should take up the full width of its container.
+     * 文件输入是否应占用其容器的全部宽度。
      */
     fill?: boolean;
 
     /**
-     * The props to pass to the child input.
-     * `disabled` will be ignored in favor of the top-level prop.
-     * `type` will be ignored, because the input _must_ be `type="file"`.
-     * Pass `onChange` here to be notified when the user selects a file.
+     * 属性传递给子input。
+     * `disabled`将被忽略，侧重于顶级属性设置。
+     * `type`将被忽略，因为input_必须_是`type="file"`。
+     * 在这里传递`onChange`以在用户选择文件时得到通知。
      */
     inputProps?: React.HTMLProps<HTMLInputElement>;
 
     /**
-     * Whether the file input should appear with large styling.
+     * 文件上传是否应该以较大的样式显示。
      */
     large?: boolean;
 
     /**
-     * Callback invoked on `input` `change` events.
+     * 在`input`的`change`事件上调用回调。
      *
-     * This callback is offered as a convenience; it is equivalent to passing
-     * `onChange` to `inputProps`.
+     * 这个回调是为了方便而提供的。这相当于将`onChange`传递给`inputProps`。
      *
-     * __Note:__ If you pass `onChange` as a top-level prop, it will be passed
-     * to the wrapping `label` rather than the `input`, which may not be what
-     * you expect.
+     * __注意：如过你作为顶级属性传递`onChange`，它将被传递到`label`而不是`input`，这或许不是你所期望的。
      */
     onInputChange?: React.FormEventHandler<HTMLInputElement>;
 
     /**
-     * The text to display.
+     * 要显示的文字。
      * @default "Choose file..."
      */
     text?: string;
