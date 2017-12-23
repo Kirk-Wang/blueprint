@@ -11,22 +11,22 @@ Input groups
 Markup:
 <div class="pt-input-group {{.modifier}}">
   <span class="pt-icon pt-icon-filter"></span>
-  <input type="text" class="pt-input" {{:modifier}} placeholder="Filter histogram..." />
+  <input type="text" class="pt-input" {{:modifier}} placeholder="过滤直方图..." />
 </div>
 <div class="pt-input-group {{.modifier}}">
-  <input type="password" class="pt-input" {{:modifier}} placeholder="Enter your password..." />
+  <input type="password" class="pt-input" {{:modifier}} placeholder="输入你的密码..." />
   <button class="pt-button pt-minimal pt-intent-warning pt-icon-lock" {{:modifier}}></button>
 </div>
 <div class="pt-input-group {{.modifier}}">
   <span class="pt-icon pt-icon-search"></span>
-  <input type="text" class="pt-input" {{:modifier}} placeholder="Search" />
+  <input type="text" class="pt-input" {{:modifier}} placeholder="搜索" />
   <button class="pt-button pt-minimal pt-intent-primary pt-icon-arrow-right" {{:modifier}}></button>
 </div>
 
-:disabled - Disabled input. Must be added separately to the <code>&#60;input&#62;</code> and <code>&#60;button&#62;</code>. Also add <code>.pt-disabled</code> to <code>.pt-input-group</code> for icon coloring (not shown below).
-.pt-round - Rounded caps. Button will also be rounded.
-.pt-large - Large group. Children will adjust size accordingly.
-.pt-intent-primary - Primary intent. (All 4 intents are supported.)
+:disabled - 禁用输入。必须单独添加到<code>&#60;input&#62;</code>和<code>&#60;button&#62;</code>。对于图标颜色，还要将<code>.pt-disabled</code>添加到<code>.pt-input-group</code>中（以下未显示）。
+.pt-round - 圆角。按钮也将被圆角。
+.pt-large - 更大的组。子元素将会相应的调整大小。
+.pt-intent-primary - 主要意图。（所有4个意图都被支持。）
 
 Styleguide pt-input-group
 */
