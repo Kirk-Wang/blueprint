@@ -9,15 +9,15 @@ Text inputs
 Markup:
 <input class="pt-input {{.modifier}}" {{:modifier}} type="text" placeholder="Text input" dir="auto" />
 
-:disabled - Disabled
-:readonly - Readonly
-.pt-round - Rounded ends
-.pt-large - Larger size
-.pt-intent-primary - Primary intent
-.pt-intent-success - Success intent
-.pt-intent-warning - Warning intent
-.pt-intent-danger - Danger intent
-.pt-fill - Take up full width of parent element
+:disabled - 已禁用
+:readonly - 只读
+.pt-round - 圆角
+.pt-large - 更大的尺寸
+.pt-intent-primary - 主视觉意图
+.pt-intent-success - 成功视觉意图
+.pt-intent-warning - 警告视觉意图
+.pt-intent-danger - 危险视觉意图
+.pt-fill - 占用父元素的全部宽度
 
 Styleguide pt-input
 */
@@ -58,11 +58,11 @@ Search inputs
 Markup:
 <div class="pt-input-group {{.modifier}}">
   <span class="pt-icon pt-icon-search"></span>
-  <input class="pt-input" {{:modifier}} type="search" placeholder="Search input" dir="auto" />
+  <input class="pt-input" {{:modifier}} type="search" placeholder="搜索输入" dir="auto" />
 </div>
 
-:disabled - Disabled. Also add <code>.pt-disabled</code> to <code>.pt-input-group</code> for icon coloring (not shown below).
-.pt-large - Large
+:disabled - 禁用。对于图标颜色，还要将<code>.pt-disabled</code>添加到<code>.pt-input-group</code>（以下未显示）。
+.pt-large - 大
 
 Styleguide pt-input.pt-search
 */
@@ -73,12 +73,12 @@ Textareas
 Markup:
 <textarea class="pt-input {{.modifier}}" {{:modifier}} dir="auto"></textarea>
 
-:disabled - Disabled
-:readonly - Readonly
-.pt-large - Larger font size
-.pt-intent-primary - Primary intent
-.pt-intent-danger  - Danger intent
-.pt-fill  - Take up full width of parent element
+:disabled - 已禁用
+:readonly - 只读
+.pt-large - 较大的字体大小
+.pt-intent-primary - 主要意图
+.pt-intent-danger  - 危险意图
+.pt-fill  - 占用父元素的全部宽度
 
 Styleguide pt-textarea
 */

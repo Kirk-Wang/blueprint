@@ -1,17 +1,13 @@
-@# Text inputs
+@# Text inputs|文本框
 
-Use the `pt-input` class on an `input[type="text"]`. You should also specify `dir="auto"`
-[to better support RTL languages](http://www.w3.org/International/questions/qa-html-dir#dirauto)
-(in all browsers except Internet Explorer).
+在`input[type="text"]`上使用`pt-input`类。您还应该指定`dir="auto"`[以更好地支持RTL语言](http://www.w3.org/International/questions/qa-html-dir#dirauto)（在除Internet Explorer之外的所有浏览器中）。
 
 @css pt-input
 
-@## Search field
+@## Search field|搜索栏
 
-Changing the `<input>` element's `type` attribute to `"search"` styles it to look like a search
-field, giving it a rounded appearance. This style is equivalent to the `.pt-round` modifier, but it
-is applied automatically for `[type="search"]` inputs.
+将`<input>`元素的`type`属性更改为`“search”`使其看起来像一个搜索栏，使其具有一个圆润的外观。这种风格相当于`.pt-round`修饰符，但它自动适用于`[type="search"]`输入。
 
-Note that some browsers also implement a handler for the `esc` key to clear the text in a search field.
+请注意，某些浏览器还实现了`esc`键的处理程序来清除搜索栏中的文本。
 
 @css pt-input.pt-search

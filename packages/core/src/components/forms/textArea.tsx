@@ -12,12 +12,12 @@ import { IIntentProps, IProps } from "../../common/props";
 
 export interface ITextAreaProps extends React.AllHTMLAttributes<HTMLTextAreaElement>, IIntentProps, IProps {
     /**
-     * Whether the text area should take up the full width of its container.
+     * 文本区域是否应占用其容器的整个宽度。
      */
     fill?: boolean;
 
     /**
-     * Whether the text area should appear with large styling.
+     * 文本区域是否应该以较大的样式显示。
      */
     large?: boolean;
 }
