@@ -53,13 +53,13 @@ export interface ILinkProps {
 
 /** Interface for a controlled input. */
 export interface IControlledProps {
-    /** Initial value of the input, for uncontrolled usage. */
+    /** input的初始值，用于不受控使用。 */
     defaultValue?: string;
 
-    /** Change event handler. Use `event.target.value` for new value. */
+    /** 更改事件处理程序。使用`event.target.value`作为新的值。 */
     onChange?: React.FormEventHandler<HTMLElement>;
 
-    /** Form value of the input, for controlled usage. */
+    /** input的表单值，用于受控使用。 */
     value?: string;
 }
 

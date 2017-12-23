@@ -14,29 +14,29 @@ import { Icon, IconName } from "../icon/icon";
 
 export interface IInputGroupProps extends IControlledProps, IIntentProps, IProps {
     /**
-     * Whether the input is non-interactive.
-     * Note that `rightElement` must be disabled separately; this prop will not affect it.
+     * input是否是非交互式的。
+     * 请注意，`rightElement`必须单独禁用;这个属性不会影响它。
      * @default false
      */
     disabled?: boolean;
 
-    /** Ref handler that receives HTML `<input>` element backing this component. */
+    /** 引用处理器，它接收此组件背后的HTML`<input>`元素。 */
     inputRef?: (ref: HTMLInputElement) => any;
 
-    /** Name of the icon (the part after `pt-icon-`) to render on left side of input. */
+    /** input左侧的图标名称（`pt-icon-`之后的部分）。 */
     leftIconName?: IconName;
 
-    /** Placeholder text in the absence of any value. */
+    /** 没有任何值的占位符文本。 */
     placeholder?: string;
 
     /**
-     * Element to render on right side of input.
-     * For best results, use a minimal button, tag, or small spinner.
+     * 要在input右侧渲染的元素。
+     * 为获得最佳效果，请使用minimal button，tag或small spinner。
      */
     rightElement?: JSX.Element;
 
     /**
-     * HTML `input` type attribute.
+     * HTML`input`type属性。
      * @default "text"
      */
     type?: string;

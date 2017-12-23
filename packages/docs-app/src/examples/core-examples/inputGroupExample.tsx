@@ -67,15 +67,15 @@ export class InputGroupExample extends BaseExample<IInputGroupExampleState> {
             <Popover
                 content={
                     <Menu>
-                        <MenuItem text="can edit" />
-                        <MenuItem text="can view" />
+                        <MenuItem text="可以编辑" />
+                        <MenuItem text="可以查看" />
                     </Menu>
                 }
                 isDisabled={disabled}
                 position={Position.BOTTOM_RIGHT}
             >
                 <Button className={Classes.MINIMAL} disabled={disabled} rightIconName="caret-down">
-                    can edit
+                    可以编辑
                 </Button>
             </Popover>
         );
@@ -92,14 +92,14 @@ export class InputGroupExample extends BaseExample<IInputGroupExampleState> {
                         disabled={disabled}
                         leftIconName="filter"
                         onChange={this.handleFilterChange}
-                        placeholder="Filter histogram..."
+                        placeholder="过滤直方图..."
                         rightElement={maybeSpinner}
                         value={filterValue}
                     />
                     <InputGroup
                         className={largeClassName}
                         disabled={disabled}
-                        placeholder="Enter your password..."
+                        placeholder="输入你的密码..."
                         rightElement={lockButton}
                         type={showPassword ? "text" : "password"}
                     />
@@ -110,14 +110,14 @@ export class InputGroupExample extends BaseExample<IInputGroupExampleState> {
                         disabled={disabled}
                         leftIconName="tag"
                         onChange={this.handleTagChange}
-                        placeholder="Find tags"
+                        placeholder="查找标签"
                         rightElement={resultsTag}
                         value={tagValue}
                     />
                     <InputGroup
                         className={largeClassName}
                         disabled={disabled}
-                        placeholder="Add people or groups..."
+                        placeholder="添加人员或群组..."
                         rightElement={permissionsMenu}
                     />
                 </div>
@@ -129,8 +129,8 @@ export class InputGroupExample extends BaseExample<IInputGroupExampleState> {
         const { disabled, large } = this.state;
         return [
             [
-                <Switch key="disabled" label="Disabled" onChange={this.handleDisabledChange} checked={disabled} />,
-                <Switch key="large" label="Large" onChange={this.handleLargeChange} checked={large} />,
+                <Switch key="disabled" label="禁用" onChange={this.handleDisabledChange} checked={disabled} />,
+                <Switch key="large" label="大的" onChange={this.handleLargeChange} checked={large} />,
             ],
         ];
     }
