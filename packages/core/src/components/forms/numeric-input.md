@@ -1,76 +1,58 @@
-@# Numeric inputs
+@# Numeric inputs|数字输入框
 
-The `NumericInput` component provides controls for easily inputting,
-incrementing, and decrementing numeric values.
+`NumericInput`组件提供了用于轻松输入，递增和递减数字值的控件。
 
-@## Interactions
+@## Interactions|交互
 
-Values in numeric inputs can be incremented or decremented using both keyboard and mouse interactions.
+数字输入框中的值可以使用键盘和鼠标交互进行递增或递减。
 
-##### Keyboard interactions
+##### 键盘交互
 
-- `↑/↓` - change the value by one step (default: `±1`)
-- `Shift + ↑/↓` - change the value by one major step (default: `±10`)
-- `Alt + ↑/↓` - change the value by one minor step (default: `±0.1`)
+- `↑/↓` - 值更改一步（默认值：`±1`）
+- `Shift + ↑/↓` - 将该值更改一大步（默认值：`±10`）
+- `Alt + ↑/↓` - 改变一个小步的值（默认：`±0.1`）
 
-##### Mouse interactions
+##### 鼠标交互
 
-- `Click ⌃/⌄` - change the value by one step (default: `±1`)
-- `Shift + Click ⌃/⌄` - change the value by one major step (default: `±10`)
-- `Alt + Click ⌃/⌄` - change the value by one minor step (default: `±0.1`)
+- `Click ⌃/⌄` - 值更改一步（默认值：`±1`）
+- `Shift + Click ⌃/⌄` - 将该值更改一大步（默认值：`±10`）
+- `Alt + Click ⌃/⌄` - 改变一个小步的值（默认：`±0.1`）
 
-@## Basic example
+@## Basic example|基本的例子
 
-This example shows how `NumericInput` works out of the box. It supports the
-basic keyboard and mouse interactions listed above, as well as basic keyboard
-entry:
+这个例子显示`NumericInput`是如何工作的。 它支持上面列出的基本键盘和鼠标交互，以及基本的键盘输入：
 
 @reactExample NumericInputBasicExample
 
-@## Extended example
+@## Extended example|扩展示例
 
-This example shows how `NumericInput` can be extended beyond its core
-functionality. It supports the basic interactions above as well as each of the
-following types of input:
+这个例子展示了如何将`NumericInput`扩展到核心功能之外。它支持上面的基本交互以及以下每种输入：
 
-- **Number abbreviations** (e.g. `2.1k`, `-0.3m`)
-- **Scientific notation** (e.g. `2.1e3`, `-0.3e6`)
-- **Addition and subtraction expressions** (e.g. `3+2`, `0.1m - 5k + 1`)
+- **数字缩写**（例如`2.1k`，`-0.3m`）
+- **科学记数法**（例如`2.1e3`，`-0.3e6`）
+- **加法和减法表达式**（例如`3 + 2`，`0.1m - 5k + 1`）
 
-These special-case inputs are evaluated when `Enter` is pressed (via a
-custom `onKeyDown` callback) and when the field loses focus (via a custom
-`onBlur` callback). If the input is invalid when either of these callbacks is
-trigged, the field will be cleared.
+当按下`Enter`键（通过一个自定义的`onKeyDown`回调函数）和当这个字段失去焦点时（通过一个自定义的`onBlur`回调函数），这些特殊情况的输入被评估。如果这些回调触发时输入无效，该字段将被清除。
 
 <div class="pt-callout pt-intent-primary pt-icon-info-sign">
-    This example contains non-core functionality that is meant to demonstrate
-    the extensibility of the `NumericInput` component. The correctness of the
-    custom evaluation code has not been tested robustly.
+    这个例子包含非核心功能，用来演示`NumericInput`组件的可扩展性。自定义评估代码的正确性尚未经过严格测试。
 </div>
 
 @reactExample NumericInputExtendedExample
 
 @## JavaScript API
 
-The `NumericInput` component is available in the __@blueprintjs/core__ package.
-Make sure to review the [general usage docs for JS
-components](#blueprint.usage).
+`NumericInput`组件在__@blueprintjs/core__包中可用。请务必查看[JS组件通用用法文档](#blueprint.usage)。
 
 @interface INumericInputProps
 
-@### Responsive numeric inputs
+@### Responsive numeric inputs|响应式数字输入
 
-`NumericInput` can be styled with the same set of CSS classes that modify
-regular [control groups](#core/components/forms/control-group). The most appropriate
-such modifier for `NumericInput` is `pt-fill`, which when passed as a
-`className` will make the component expand to fill all available width.
+`NumericInput`可以用修改常规[控件组](#core/components/forms/control-group)的相同CSS类来设置样式。`NumericInput`最合适的修饰符是`pt-fill`，当它作为`className`传递时，将使组件展开以填充所有可用的宽度。
 
-@### Uncontrolled mode
+@### Uncontrolled mode|不受控模式
 
-By default, this component will function in uncontrolled mode, managing all of
-its own state. In uncontrolled mode, simply provide an `onValueChange` callback
-in the props to access the value as the user manipulates it. The value will be
-provided to the callback both as a number and as a string.
+默认情况下，这个组件将以不受控的模式运行，管理自己的所有状态。在不受控的模式下，只需在属性上提供一个`onValueChange`回调就可以在用户操作的时候访问这个值。该值将作为数字和字符串提供给回调。
 
 ```tsx
 import { NumericInput } from "@blueprintjs/core";
@@ -89,17 +71,11 @@ export class NumericInputExample extends React.Component<{}, {}> {
 }
 ```
 
-@### Controlled mode
+@### Controlled mode|受控模式
 
-If you prefer to have more control over your numeric input's behavior, you can
-specify the `value` property to use the component in **controlled mode**.
-numeric input supports arbitrary text entry--not just numeric digits–-so the
-`value` can be provided as either a number or a string.
+如果您希望更好地控制数字输入的行为，则可以指定`value`属性以**受控模式**使用组件。数字输入支持任意文本输入--不仅仅是数字–-所以`value`可以是数字或字符串。
 
-The combined support of arbitrary text entry, controlled mode, and custom
-callbacks makes it possible to extend the numeric input's basic functionality in
-powerful ways. As shown in the example above, one could extend the numeric input
-component with support for mathematical expressions as follows:
+任意文本输入，受控模式和自定义回调的组合支持使得以有效的方式扩展数字输入的基本功能成为可能。 如上例所示，可以扩展数字输入组件，支持数学表达式，如下所示：
 
 ```tsx
 import { NumericInput } from "@blueprintjs/core";
