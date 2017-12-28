@@ -27,92 +27,89 @@ import { InputGroup } from "./inputGroup";
 
 export interface INumericInputProps extends IIntentProps, IProps {
     /**
-     * Whether to allow only floating-point number characters in the field,
-     * mimicking the native `input[type="number"]`.
+     * 是否只允许域中的浮点数字符，模仿原生的`input[type="number"]`。
      * @default true
      */
     allowNumericCharactersOnly?: boolean;
 
     /**
-     * The position of the buttons with respect to the input field.
+     * 按钮相对于输入字段的位置。
      * @default Position.RIGHT
      */
     buttonPosition?: Position.LEFT | Position.RIGHT | "none";
 
     /**
-     * Whether the value should be clamped to `[min, max]` on blur.
-     * The value will be clamped to each bound only if the bound is defined.
-     * Note that native `input[type="number"]` controls do *NOT* clamp on blur.
+     * 失去焦点时，值是否应该被钳制到`[min, max]`。
+     * 只有在定义边界的情况下，该值才会被钳位到每个边界。
+     * 请注意原生`input[type="number"]`控件失去焦点时*不*钳制
      * @default false
      */
     clampValueOnBlur?: boolean;
 
     /**
-     * Whether the input is non-interactive.
+     * input是否是非交互式的。
      * @default false
      */
     disabled?: boolean;
 
     /**
-     * If set to `true`, the input will display with larger styling.
-     * This is equivalent to setting `pt-large` via className on the
-     * parent `.pt-control-group` and on the child `.pt-input-group`.
+     * 如果设置为`true`，则input将以更大的样式显示。
+     * 这相当于通过父类`.pt-control-group`和子类`.pt-input-group`上的className设置`pt-large`。
      * @default false
      */
     large?: boolean;
 
     /**
-     * Name of the icon (the part after `pt-icon-`) to render
-     * on the left side of input.
+     * 在input左侧显示图标名称（`pt-icon-`之后的部分）。
      */
     leftIconName?: IconName;
 
-    /** The placeholder text in the absence of any value. */
+    /** 占位符文本中没有任何值。 */
     placeholder?: string;
 
     /**
-     * The increment between successive values when `shift` is held.
+     * 当`shift`被保持时，连续值之间的增量。
      * @default 10
      */
     majorStepSize?: number;
 
-    /** The maximum value of the input. */
+    /** 输入的最大值。 */
     max?: number;
 
-    /** The minimum value of the input. */
+    /** 输入的最小值。 */
     min?: number;
 
     /**
-     * The increment between successive values when `alt` is held.
+     * 当`alt`被保持时，连续值之间的增量。
      * @default 0.1
      */
     minorStepSize?: number;
 
     /**
-     * Whether the entire text field should be selected on focus.
+     * 是否应该选择聚焦整个文本字段。
      * @default false
      */
     selectAllOnFocus?: boolean;
 
     /**
-     * Whether the entire text field should be selected on increment.
+     * 是否应该在增量上选择整个文本域。
      * @default false
      */
     selectAllOnIncrement?: boolean;
 
     /**
-     * The increment between successive values when no modifier keys are held.
+     * 当没有修饰键时，连续值之间的增量。
      * @default 1
      */
     stepSize?: number;
 
-    /** The value to display in the input field. */
+    /** 要在输入域中显示的值。 */
     value?: number | string;
 
-    /** The callback invoked when the value changes due to a button click. */
+    /** 由于按钮单击而引起值更改时，被调用的回调。 */
     onButtonClick?(valueAsNumber: number, valueAsString: string): void;
 
-    /** The callback invoked when the value changes due to typing, arrow keys, or button clicks. */
+    /** 当值由于键入，方向键或按钮点击而改变时，被调用的回调。 */
     onValueChange?(valueAsNumber: number, valueAsString: string): void;
 }
 

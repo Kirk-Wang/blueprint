@@ -121,24 +121,24 @@ export class NumericInputBasicExample extends BaseExample<INumericInputBasicExam
         return [
             [
                 <label className={Classes.LABEL} key="modifierslabel">
-                    Modifiers
+                    修饰符
                 </label>,
-                this.renderSwitch("Numeric characters only", numericCharsOnly, this.toggleNumericCharsOnly),
-                this.renderSwitch("Select all on focus", selectAllOnFocus, this.toggleSelectAllOnFocus),
+                this.renderSwitch("只有数字字符", numericCharsOnly, this.toggleNumericCharsOnly),
+                this.renderSwitch("聚焦选中所有", selectAllOnFocus, this.toggleSelectAllOnFocus),
                 this.renderSwitch("Select all on increment", selectAllOnIncrement, this.toggleSelectAllOnIncrement),
-                this.renderSwitch("Disabled", showDisabled, this.toggleDisabled),
-                this.renderSwitch("Read-only", showReadOnly, this.toggleReadOnly),
-                this.renderSwitch("Left icon", showLeftIcon, this.toggleLeftIcon),
-                this.renderSwitch("Full width", showFullWidth, this.toggleFullWidth),
-                this.renderSwitch("Large", showLargeSize, this.toggleLargeSize),
+                this.renderSwitch("禁用", showDisabled, this.toggleDisabled),
+                this.renderSwitch("只读", showReadOnly, this.toggleReadOnly),
+                this.renderSwitch("左边图标", showLeftIcon, this.toggleLeftIcon),
+                this.renderSwitch("完全宽度", showFullWidth, this.toggleFullWidth),
+                this.renderSwitch("较大", showLargeSize, this.toggleLargeSize),
             ],
             [
-                this.renderSelectMenu("Minimum value", minValueIndex, MIN_VALUES, this.handleMinValueChange),
-                this.renderSelectMenu("Maximum value", maxValueIndex, MAX_VALUES, this.handleMaxValueChange),
+                this.renderSelectMenu("最小值", minValueIndex, MIN_VALUES, this.handleMinValueChange),
+                this.renderSelectMenu("最大值", maxValueIndex, MAX_VALUES, this.handleMaxValueChange),
             ],
             [
                 this.renderSelectMenu(
-                    "Button position",
+                    "按钮位置",
                     buttonPositionIndex,
                     BUTTON_POSITIONS,
                     this.handleButtonPositionChange,
